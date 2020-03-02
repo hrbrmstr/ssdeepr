@@ -1,0 +1,1889 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>R for Mac OS X FAQ</title>
+
+<meta name="description" content="R for Mac OS X FAQ">
+<meta name="keywords" content="R for Mac OS X FAQ">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="#Top" rel="start" title="Top">
+<link href="dir.html#Top" rel="up" title="(dir)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<h1 class="settitle" align="center">R for Mac OS X FAQ</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="Top"></a>
+<div class="header">
+<p>
+Next: <a href="#Introduction" accesskey="n" rel="next">Introduction</a>, Previous: <a href="dir.html#Top" accesskey="p" rel="prev">(dir)</a>, Up: <a href="dir.html#Top" accesskey="u" rel="up">(dir)</a> &nbsp; </p>
+</div>
+<a name="R-for-Mac-OS-X-FAQ"></a>
+<h1 class="top">R for Mac OS X FAQ</h1>
+<h2>Frequently Asked Questions on R for Mac OS X</h2>
+<h2>Version 3.5.0 2018-04-23, R.app 1.71</h2>
+<address>Stefano M. Iacus</address>
+<address>Simon Urbanek</address>
+<address>Rob J. Goedman</address>
+<address>Brian Ripley</address>
+<p><p><hr><p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Introduction" accesskey="1">Introduction</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#R_002eapp" accesskey="2">R.app</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-to-install-packages" accesskey="3">How to install packages</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#R-and-external-applications" accesskey="4">R and external applications</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Quartz-device" accesskey="5">Quartz device</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Tcl_002fTk-issues" accesskey="6">Tcl/Tk issues</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Internationalization-of-the-R_002eapp" accesskey="7">Internationalization of the R.app</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Additional-resources" accesskey="8">Additional resources</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Acknowledgments" accesskey="9">Acknowledgments</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Miscellaneous-questions">Miscellaneous questions</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+</pre></th></tr><tr><th colspan="3" align="left" valign="top"><pre class="menu-comment"> &mdash; The Detailed Node Listing &mdash;
+
+Introduction
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#How-many-versions-of-R-for-Mac-OS-X_003f">How many versions of R for Mac OS X?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-machines-does-R-for-Mac-OS-X-run-on_003f">What machines does R for Mac OS X run on?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-can-R-for-Mac-OS-X-be-obtained-and-installed_003f">How can R for Mac OS X be obtained and installed?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+R.app
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#How-to-get-R_002eapp">How to get R.app</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-to-install-the-R_002eapp">How to install the R.app</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#The-R-Console">The R Console</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#General-Features">General Features</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#The-Menus">The Menus</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Preferences">Preferences</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#R_002eapp-Bugs">R.app Bugs</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+The R Console
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#The-Input-and-the-Output">The Input and the Output</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Copy-and-Paste">Copy and Paste</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#The-current-and-startup-working-directories">The current and startup working directories</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Resizing-the-R-Console">Resizing the R Console</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#R-Console-text-colors">R Console text colors</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+General Features
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#Editor">Editor</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Editor-undo-and-line-numbers">Editor undo and line numbers</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Editor-text-completion">Editor text completion</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Editor-function-list">Editor function list</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Editor-syntax-coloring">Editor syntax coloring</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Editor-_0028internal-and-external_0029">Editor (internal and external)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Editor-help">Editor help</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Drag-_0026-drop">Drag &amp; drop</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Help-system">Help system</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#History">History</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Authentication-and-_002elibPaths">Authentication and .libPaths</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+The Menus
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#Application-Menu">Application Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#File-Menu">File Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Edit-Menu">Edit Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Misc-Menu">Misc Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Workspace-Menu">Workspace Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Packages-Menu">Packages Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#The-Help-Menu">The Help Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Preferences
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#Startup">Startup</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Startup
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#Editor-Preferences">Editor Preferences</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Syntax-Colors">Syntax Colors</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Console-Colors">Console Colors</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Quartz-window">Quartz window</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+How to install packages
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#Which-kind-of-packages-can-I-install-using-the-GUI_003f">Which kind of packages can I install using the GUI?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Installation-of-packages">Installation of packages</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Installation-of-source-packages">Installation of source packages</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Where-are-the-packages-I_0027ve-installed_003f">Where are the packages I've installed?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+R and external applications
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#AppleScript-support">AppleScript support</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#External-editors">External editors</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Finder-actions">Finder actions</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Quartz device
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#Interactive-mode">Interactive mode</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Saving-the-image">Saving the image</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Copying-the-image-into-the-clipboard">Copying the image into the clipboard</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Additional resources
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#Apple-Developer-Connection">Apple Developer Connection</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#The-R-for-Mac-OS-X-Developer-page">The R for Mac OS X Developer page</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Miscellaneous questions
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#How-can-I-have-a-per-session-_002eRprofile_003f">How can I have a per session .Rprofile?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-happens-if-I-drag-a-file-on-the-R-icon_003f">What happens if I drag a file on the R icon?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-can-I-interrupt-lengthy-operations-or-output_003f">How can I interrupt lengthy operations or output?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-see-spurious-error-messages-when-starting-R_0021">I see spurious error messages when starting R!</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Which-BLAS-is-used-and-how-can-it-be-changed_003f">Which BLAS is used and how can it be changed?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-don_0027t-see-a-thing-when-installing-packages_0021">I don't see a thing when installing packages!</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Why-are-there-faint-lines-in-image-plots_003f">Why are there faint lines in image plots?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Why-doesn_0027t-R-GUI-support-keyboard-shortcut-XYZ-_003f">Why doesn't R GUI support keyboard shortcut XYZ ?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-is-the-difference-between-the-CRAN-build-and-a-vanilla-build_003f">What is the difference between the CRAN build and a vanilla build?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Why-is-R_002ehome_0028_0029-not-versioned_003f">Why is R.home() not versioned?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#R_002eapp-GUI-crashes-on-startup_0021">R.app GUI crashes on startup!</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Why-is-the-GUI-not-saving-my-history_003f">Why is the GUI not saving my history?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-_0060_0060command-not-found_0027_0027-in-the-GUI-yet-it-works-in-the-Terminal-_002d_002d-why_003f">I get ``command not found'' in the GUI yet it works in the Terminal -- why?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-see-no-text-in-a-Quartz-plot_0021">I see no text in a Quartz plot!</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-_0060_0060clang_003a-error_003a-unsupported-option-_002dfopenmp_0027_0027-when-compiling-a-package-_002d_002d-why_003f">I get ``clang: error: unsupported option -fopenmp'' when compiling a package -- why?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+</pre></th></tr></table>
+
+<hr>
+<a name="Introduction"></a>
+<div class="header">
+<p>
+Next: <a href="#R_002eapp" accesskey="n" rel="next">R.app</a>, Previous: <a href="#Top" accesskey="p" rel="prev">Top</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+<a name="Introduction-1"></a>
+<h2 class="chapter">1 Introduction</h2>
+
+<p>This document contains a user guide to the <small>R.APP</small> version of <acronym>R</acronym>, and
+information on using <acronym>R</acronym> on OS X which supplements the main <acronym>R</acronym>
+manuals.  As from <acronym>R</acronym> 3.0.0 most of the information has been moved to
+those manuals, the latest versions of which can be found at
+<a href="http://cran.r-project.org/manuals.html">http://cran.r-project.org/manuals.html</a>.
+</p>
+<p>In this document <acronym>R</acronym> refers to the core, command-line-based <acronym>R</acronym> system
+while <small>R.APP</small> refers to the GUI-based Mac OS application that controls
+the underlying <acronym>R</acronym>.
+</p>
+
+<p>This &lsquo;R for Mac OS X FAQ&rsquo; is rather incomplete at the moment and requires
+contributions from users.  Anything specific to the R language can be
+found in the main R-FAQ (see
+<a href="http://cran.r-project.org/doc/FAQ/R-FAQ.html">http://cran.r-project.org/doc/FAQ/R-FAQ.html</a>).  Please send any
+requests/questions you would like answers to the
+<a href="https://stat.ethz.ch/mailman/listinfo/r-sig-mac">R-SIG-Mac</a>
+mailing list (after subscribing) as well as comments on this FAQ.
+</p>
+<p>The last section of this document contains the most frequently asked
+questions that don&rsquo;t fit strictly into any of the categories above &ndash; it
+is usually a good idea to always look into that section if your issue
+doesn&rsquo;t fit any of the above or was not answered in one of the specific
+sections. <em>Always read this FAQ before asking for help on
+R-SIG-Mac!</em>
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#How-many-versions-of-R-for-Mac-OS-X_003f" accesskey="1">How many versions of R for Mac OS X?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-machines-does-R-for-Mac-OS-X-run-on_003f" accesskey="2">What machines does R for Mac OS X run on?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-can-R-for-Mac-OS-X-be-obtained-and-installed_003f" accesskey="3">How can R for Mac OS X be obtained and installed?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<a name="How-many-versions-of-R-for-Mac-OS-X_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#What-machines-does-R-for-Mac-OS-X-run-on_003f" accesskey="n" rel="next">What machines does R for Mac OS X run on?</a>, Previous: <a href="#Introduction" accesskey="p" rel="prev">Introduction</a>, Up: <a href="#Introduction" accesskey="u" rel="up">Introduction</a> &nbsp; </p>
+</div>
+<a name="How-many-versions-of-R-for-Mac-OS-X_003f-1"></a>
+<h3 class="section">1.1 How many versions of R for Mac OS X?</h3>
+
+<p>There is only one version of R for Mac OS X.  However, <acronym>R</acronym> on Mac OS X
+can be used either on the command-line as on other Unix systems, or via
+the <small>R.APP</small> GUI (see <a href="#R_002eapp">R.app</a>).  The second approach is mostly
+preferred by Macintosh users.
+</p>
+<p>Prior to <acronym>R</acronym> 3.0.0 there were separate 32- and 64-bit version of
+<small>R.APP</small>: nowadays only 64-bit builds are supported in binary form.
+</p>
+<hr>
+<a name="What-machines-does-R-for-Mac-OS-X-run-on_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-can-R-for-Mac-OS-X-be-obtained-and-installed_003f" accesskey="n" rel="next">How can R for Mac OS X be obtained and installed?</a>, Previous: <a href="#How-many-versions-of-R-for-Mac-OS-X_003f" accesskey="p" rel="prev">How many versions of R for Mac OS X?</a>, Up: <a href="#Introduction" accesskey="u" rel="up">Introduction</a> &nbsp; </p>
+</div>
+<a name="What-machines-does-R-for-Mac-OS-X-run-on_003f-1"></a>
+<h3 class="section">1.2 What machines does R for Mac OS X run on?</h3>
+
+<p>64-bit Intel-based Macs, that is any machine made since mid 2008.
+</p>
+<hr>
+<a name="How-can-R-for-Mac-OS-X-be-obtained-and-installed_003f"></a>
+<div class="header">
+<p>
+Previous: <a href="#What-machines-does-R-for-Mac-OS-X-run-on_003f" accesskey="p" rel="prev">What machines does R for Mac OS X run on?</a>, Up: <a href="#Introduction" accesskey="u" rel="up">Introduction</a> &nbsp; </p>
+</div>
+<a name="How-can-R-for-Mac-OS-X-be-obtained-and-installed_003f-1"></a>
+<h3 class="section">1.3 How can R for Mac OS X be obtained and installed?</h3>
+
+<p><acronym>R</acronym> is available on <acronym>CRAN</acronym> in the form of an Installer package
+containing the R framework and the <small>R.APP</small> GUI. The package is usually
+named <samp>R.pkg</samp> with an optional version number.
+</p>
+<p>The installation is done by double-clicking on the Installer
+package. The Installer will guide you through the necessary steps.  Note
+that it will require password or login of an account with administrator
+privileges.  The installation can be customized, but the default is
+suitable for most users.
+</p>
+<p>Snapshots of the R-patched and R-devel flavours are available at
+<a href="http://r.research.att.com/">http://r.research.att.com/</a>, packaged in the same way.
+</p>
+<p>Further details, including uninstallation and building <acronym>R</acronym> from the
+sources, are in the &lsquo;R Installation and Administration Manual&rsquo;.
+</p>
+
+<hr>
+<a name="R_002eapp"></a>
+<div class="header">
+<p>
+Next: <a href="#How-to-install-packages" accesskey="n" rel="next">How to install packages</a>, Previous: <a href="#Introduction" accesskey="p" rel="prev">Introduction</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+<a name="R_002eapp-1"></a>
+<h2 class="chapter">2 R.app</h2>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#How-to-get-R_002eapp" accesskey="1">How to get R.app</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-to-install-the-R_002eapp" accesskey="2">How to install the R.app</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#The-R-Console" accesskey="3">The R Console</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#General-Features" accesskey="4">General Features</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#The-Menus" accesskey="5">The Menus</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Preferences" accesskey="6">Preferences</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#R_002eapp-Bugs" accesskey="7">R.app Bugs</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<p><small>R.APP</small> is the name of the GUI for Mac OS X that was introduced in R
+2.0.0. It appears as an icon labeled <em>R</em>, but to avoid confusion
+with general <acronym>R</acronym>, we prefer to use the name as it appears when using
+<em>Get Info</em> on the GUI: <small>R.APP</small> This stands for <em>R
+application</em>.
+</p>
+<p>Internally <small>R.APP</small> is a Cocoa program (hence written in Objective C)
+which links to embedded <acronym>R</acronym> installed as a framework.
+</p>
+
+<hr>
+<a name="How-to-get-R_002eapp"></a>
+<div class="header">
+<p>
+Next: <a href="#How-to-install-the-R_002eapp" accesskey="n" rel="next">How to install the R.app</a>, Previous: <a href="#R_002eapp" accesskey="p" rel="prev">R.app</a>, Up: <a href="#R_002eapp" accesskey="u" rel="up">R.app</a> &nbsp; </p>
+</div>
+<a name="How-to-get-R_002eapp-1"></a>
+<h3 class="section">2.1 How to get R.app</h3>
+
+<p><small>R.APP</small> is part of the binary distribution of R for Mac OS X available
+from <acronym>CRAN</acronym>. That distribution consists of one package containing the R
+framework and <small>R.APP</small>.
+</p>
+<p>Development versions of <small>R.APP</small> are made available on daily basis in the
+form of a disk image containing the <small>R.APP</small> itself. See the Mac OS X
+pages on <acronym>CRAN</acronym> for detail how to obtain such snapshots (currently at
+<a href="http://R.research.att.com/">http://R.research.att.com/</a>).
+</p>
+<hr>
+<a name="How-to-install-the-R_002eapp"></a>
+<div class="header">
+<p>
+Next: <a href="#The-R-Console" accesskey="n" rel="next">The R Console</a>, Previous: <a href="#How-to-get-R_002eapp" accesskey="p" rel="prev">How to get R.app</a>, Up: <a href="#R_002eapp" accesskey="u" rel="up">R.app</a> &nbsp; </p>
+</div>
+<a name="How-to-install-the-R_002eapp-1"></a>
+<h3 class="section">2.2 How to install the R.app</h3>
+<p><small>R.APP</small> is installed the same way as the R framework, namely using
+binary package provided on <acronym>CRAN</acronym>. The <samp>bin/macosx</samp> directory of a
+<acronym>CRAN</acronym> site contains a standard Apple installer package named
+<samp>R.pkg</samp> (optionally containing the version number). Download and
+double-click the package icon.
+</p>
+<p>Please, carefully read the note on the usage of tcltk and Fortran on the <samp>bin/macosx</samp> directory of a <acronym>CRAN</acronym> site.
+</p>
+<hr>
+<a name="The-R-Console"></a>
+<div class="header">
+<p>
+Next: <a href="#General-Features" accesskey="n" rel="next">General Features</a>, Previous: <a href="#How-to-install-the-R_002eapp" accesskey="p" rel="prev">How to install the R.app</a>, Up: <a href="#R_002eapp" accesskey="u" rel="up">R.app</a> &nbsp; </p>
+</div>
+<a name="The-R-Console-1"></a>
+<h3 class="section">2.3 The R Console</h3>
+<p>In this section you&rsquo;ll find general information on the <small>R.APP</small>. For specific <acronym>R</acronym> tasks that
+can be done via the <small>R.APP</small> using menus you should read below (see <a href="#The-Menus">The Menus</a>). 
+</p><table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#The-Input-and-the-Output" accesskey="1">The Input and the Output</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Copy-and-Paste" accesskey="2">Copy and Paste</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#The-current-and-startup-working-directories" accesskey="3">The current and startup working directories</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Resizing-the-R-Console" accesskey="4">Resizing the R Console</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#R-Console-text-colors" accesskey="5">R Console text colors</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+
+<hr>
+<a name="The-Input-and-the-Output"></a>
+<div class="header">
+<p>
+Next: <a href="#Copy-and-Paste" accesskey="n" rel="next">Copy and Paste</a>, Previous: <a href="#The-R-Console" accesskey="p" rel="prev">The R Console</a>, Up: <a href="#The-R-Console" accesskey="u" rel="up">The R Console</a> &nbsp; </p>
+</div>
+<a name="The-Input-and-the-Output-1"></a>
+<h4 class="subsection">2.3.1 The Input and the Output</h4>
+<p>The current design of the R Console is to have a single frame for input (user) and output (R).
+</p>
+<hr>
+<a name="Copy-and-Paste"></a>
+<div class="header">
+<p>
+Next: <a href="#The-current-and-startup-working-directories" accesskey="n" rel="next">The current and startup working directories</a>, Previous: <a href="#The-Input-and-the-Output" accesskey="p" rel="prev">The Input and the Output</a>, Up: <a href="#The-R-Console" accesskey="u" rel="up">The R Console</a> &nbsp; </p>
+</div>
+<a name="Copy-and-Paste-1"></a>
+<h4 class="subsection">2.3.2 Copy and Paste</h4>
+<p>Copy and paste works in R as in any other Macintosh application.
+</p>
+<p>If you want high resolution graphic exports, you can save the PDF format using the <em>File/Save as</em> menu item (see <a href="#Quartz-device">Quartz device</a>). Or you can use supported formats in R through <code>pdf()</code>, <code>jpeg()</code> etc. (type <code>?capabilities</code> to get more details).
+</p>
+<hr>
+<a name="The-current-and-startup-working-directories"></a>
+<div class="header">
+<p>
+Next: <a href="#Resizing-the-R-Console" accesskey="n" rel="next">Resizing the R Console</a>, Previous: <a href="#Copy-and-Paste" accesskey="p" rel="prev">Copy and Paste</a>, Up: <a href="#The-R-Console" accesskey="u" rel="up">The R Console</a> &nbsp; </p>
+</div>
+<a name="The-current-and-startup-working-directories-1"></a>
+<h4 class="subsection">2.3.3 The current and startup working directories</h4>
+<p>If not otherwise specified in the Preferences (see <a href="#Preferences">Preferences</a>), or if the specified path is no longer available, then the default working directory at startup is the user home.
+The working directory can be changed using the <em>setwd</em> R command or using the <em>Misc</em> menu item <em>Change working directory</em>. Finally it is possible to use a specific directory for a single <acronym>R</acronym> session by dragging a folder onto the <small>R.APP</small> icon. If <small>R.APP</small> is not running, this will cause <small>R.APP</small> to be started in the directory corresponding to the folder dragged. The same can be achieved on the command line &ndash; for example <code>open -a R .</code> causes <small>R.APP</small> to be started using the current directory as the startup working directory.
+</p>
+<p>This feature is useful if you want different startup procedures defined by the <samp>.Rprofile</samp>; you can 
+edit a <samp>.Rprofile</samp> (containing you personal initialization <acronym>R</acronym> commands) in a particular directory and use
+the Preferences (or any other method mentioned above) to change the startup directory. Next time you launch <samp>R.app</samp> the <samp>.Rprofile</samp> is read and executed by <acronym>R</acronym> at startup. This is the equivalent on Unix (or the command line) to launch <acronym>R</acronym> from different directories.
+</p>
+ 
+<hr>
+<a name="Resizing-the-R-Console"></a>
+<div class="header">
+<p>
+Next: <a href="#R-Console-text-colors" accesskey="n" rel="next">R Console text colors</a>, Previous: <a href="#The-current-and-startup-working-directories" accesskey="p" rel="prev">The current and startup working directories</a>, Up: <a href="#The-R-Console" accesskey="u" rel="up">The R Console</a> &nbsp; </p>
+</div>
+<a name="Resizing-the-R-Console-1"></a>
+<h4 class="subsection">2.3.4 Resizing the R Console</h4>
+<p>When the R Console Window is resized, the R option <em>width</em> is set appropriately so that any future
+output will fit the window size.
+</p>
+<hr>
+<a name="R-Console-text-colors"></a>
+<div class="header">
+<p>
+Previous: <a href="#Resizing-the-R-Console" accesskey="p" rel="prev">Resizing the R Console</a>, Up: <a href="#The-R-Console" accesskey="u" rel="up">The R Console</a> &nbsp; </p>
+</div>
+<a name="R-Console-text-colors-1"></a>
+<h4 class="subsection">2.3.5 R Console text colors</h4>
+<p>Use the Preferences window to set the R Console text colors (see <a href="#Preferences">Preferences</a>).
+</p>
+<hr>
+<a name="General-Features"></a>
+<div class="header">
+<p>
+Next: <a href="#The-Menus" accesskey="n" rel="next">The Menus</a>, Previous: <a href="#The-R-Console" accesskey="p" rel="prev">The R Console</a>, Up: <a href="#R_002eapp" accesskey="u" rel="up">R.app</a> &nbsp; </p>
+</div>
+<a name="General-Features-1"></a>
+<h3 class="section">2.4 General Features</h3>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Editor" accesskey="1">Editor</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Editor-undo-and-line-numbers" accesskey="2">Editor undo and line numbers</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Editor-text-completion" accesskey="3">Editor text completion</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Editor-function-list" accesskey="4">Editor function list</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Editor-syntax-coloring" accesskey="5">Editor syntax coloring</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Editor-_0028internal-and-external_0029" accesskey="6">Editor (internal and external)</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Editor-help" accesskey="7">Editor help</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Drag-_0026-drop" accesskey="8">Drag &amp; drop</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Help-system" accesskey="9">Help system</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#History">History</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Authentication-and-_002elibPaths">Authentication and .libPaths</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<a name="Editor"></a>
+<div class="header">
+<p>
+Next: <a href="#Editor-undo-and-line-numbers" accesskey="n" rel="next">Editor undo and line numbers</a>, Previous: <a href="#General-Features" accesskey="p" rel="prev">General Features</a>, Up: <a href="#General-Features" accesskey="u" rel="up">General Features</a> &nbsp; </p>
+</div>
+<a name="Editor-1"></a>
+<h4 class="subsection">2.4.1 Editor</h4>
+<p><small>R.APP</small> provides an integrated editor for editing of R code. It sports a number of features designed to help developing code inside R. The probably most often used function is the ability to execute code directly from the editor by pressing <kbd><span class="key">Command</span>-<span class="key">Return</span></kbd>. Other features include syntax highlighting, brace-matching, code completion and function indexing.
+</p>
+<hr>
+<a name="Editor-undo-and-line-numbers"></a>
+<div class="header">
+<p>
+Next: <a href="#Editor-text-completion" accesskey="n" rel="next">Editor text completion</a>, Previous: <a href="#Editor" accesskey="p" rel="prev">Editor</a>, Up: <a href="#General-Features" accesskey="u" rel="up">General Features</a> &nbsp; </p>
+</div>
+<a name="Editor-undo-and-line-numbers-1"></a>
+<h4 class="subsection">2.4.2 Editor undo and line numbers</h4>
+<p>The editor supports undo/redo operations on an appropriate level of granularity (used to
+be all or nothing). The editor has an optional facility to show line numbers. These help with
+locating error messages. The editor also responds to the &rsquo;Go to Line&rsquo; Edit menu function. The
+associated Preference Pane allows enabling/disabling of the line numbers, as well as setting line
+number gutter width (to fit larger line numbers) and text margin width.
+</p>
+<hr>
+<a name="Editor-text-completion"></a>
+<div class="header">
+<p>
+Next: <a href="#Editor-function-list" accesskey="n" rel="next">Editor function list</a>, Previous: <a href="#Editor-undo-and-line-numbers" accesskey="p" rel="prev">Editor undo and line numbers</a>, Up: <a href="#General-Features" accesskey="u" rel="up">General Features</a> &nbsp; </p>
+</div>
+<a name="Editor-text-completion-1"></a>
+<h4 class="subsection">2.4.3 Editor text completion</h4>
+<p>Completion of typed input (both file names and R code) in the editor is available through the Edit menu &rsquo;Complete&rsquo; or by typing <kbd><span class="key">Control</span>-<span class="key">.</span></kbd> (same as is Xcode). It uses the same facilities as the console window (for compatibility the console responds to both <tt class="key">Tab</tt> and <kbd><span class="key">Control</span>-<span class="key">.</span></kbd>).
+</p>
+<hr>
+<a name="Editor-function-list"></a>
+<div class="header">
+<p>
+Next: <a href="#Editor-syntax-coloring" accesskey="n" rel="next">Editor syntax coloring</a>, Previous: <a href="#Editor-text-completion" accesskey="p" rel="prev">Editor text completion</a>, Up: <a href="#General-Features" accesskey="u" rel="up">General Features</a> &nbsp; </p>
+</div>
+<a name="Editor-function-list-1"></a>
+<h4 class="subsection">2.4.4 Editor function list</h4>
+<p>The editor maintains a popup list of functions defined in the edited document. The list is available in the toolbar and is updated as you type. Selecting a function from that list causes the cursor to jump to the beginning of the function.
+</p>
+<hr>
+<a name="Editor-syntax-coloring"></a>
+<div class="header">
+<p>
+Next: <a href="#Editor-_0028internal-and-external_0029" accesskey="n" rel="next">Editor (internal and external)</a>, Previous: <a href="#Editor-function-list" accesskey="p" rel="prev">Editor function list</a>, Up: <a href="#General-Features" accesskey="u" rel="up">General Features</a> &nbsp; </p>
+</div>
+<a name="Editor-syntax-coloring-1"></a>
+<h4 class="subsection">2.4.5 Editor  syntax coloring</h4>
+<p>The editor supports syntax-highlighting for R code. It is possible to change the syntax highlighting colors using the Syntax Color Preference Pane (see below). Starting with <small>R.APP</small> version 1.17 lazy syntax highlighting is used, which means that changes influencing the entire file (such as typing a single or double quote) no longer apply to the entire file, but only a few lines. This temporary state is usually recovered by closing the quote, but in some rare instances it may persist until a change is made to the first line of the offending quote. However, lazy highlighting brings huge speedup when editing large files.
+</p>
+<hr>
+<a name="Editor-_0028internal-and-external_0029"></a>
+<div class="header">
+<p>
+Next: <a href="#Editor-help" accesskey="n" rel="next">Editor help</a>, Previous: <a href="#Editor-syntax-coloring" accesskey="p" rel="prev">Editor syntax coloring</a>, Up: <a href="#General-Features" accesskey="u" rel="up">General Features</a> &nbsp; </p>
+</div>
+<a name="Editor-_0028internal-and-external_0029-1"></a>
+<h4 class="subsection">2.4.6 Editor (internal and external)</h4>
+<p>By default, the editor used is incorporated into <small>R.APP</small>, the Mac OS X GUI for R. It is a
+relatively simple multi-document editor that supports the features listed above. Additionally,
+two powerful commands are available to source the file being edited in its entirety (<kbd>Command-E</kbd>)
+or to source the current selection to <acronym>R</acronym> (<kbd>Command-Return</kbd>). Using <acronym>R</acronym>&rsquo;s <code>edit()</code> function, allows
+editing of R objects or files while <acronym>R</acronym> is kept waiting for the edit session to finish.
+</p>
+<p>It is possible to &rsquo;redirect&rsquo; all <acronym>R</acronym> requests to an external editor, which runs
+outside <small>R.APP</small>. In that case, it is not possible to keep <acronym>R</acronym> waiting if <code>edit()</code> is used. Using
+AppleScript it is easy to implement <kbd>Command-E</kbd> and <kbd>Command-Return</kbd> like functionality.
+</p>
+
+<hr>
+<a name="Editor-help"></a>
+<div class="header">
+<p>
+Next: <a href="#Drag-_0026-drop" accesskey="n" rel="next">Drag &amp; drop</a>, Previous: <a href="#Editor-_0028internal-and-external_0029" accesskey="p" rel="prev">Editor (internal and external)</a>, Up: <a href="#General-Features" accesskey="u" rel="up">General Features</a> &nbsp; </p>
+</div>
+<a name="Editor-help-1"></a>
+<h4 class="subsection">2.4.7 Editor help</h4>
+<p>The editor contains a light-weight help system in form of a search filed placed inside the toolbar. It is possible to use either an exact or approximate search.
+</p>		
+<hr>
+<a name="Drag-_0026-drop"></a>
+<div class="header">
+<p>
+Next: <a href="#Help-system" accesskey="n" rel="next">Help system</a>, Previous: <a href="#Editor-help" accesskey="p" rel="prev">Editor help</a>, Up: <a href="#General-Features" accesskey="u" rel="up">General Features</a> &nbsp; </p>
+</div>
+<a name="Drag-_0026-drop-1"></a>
+<h4 class="subsection">2.4.8 Drag &amp; drop</h4>
+
+<p>Drag and drop of a directory on the <small>R.APP</small> icon while <small>R.APP</small> is not
+running will start <small>R.APP</small> and set the working directory. By default
+<samp>.RData</samp> and the history file (default name <samp>.Rapp.history</samp>)
+are fetched from this working directory.  If a file is dropped on the
+<small>R.APP</small> icon while <small>R.APP</small> is not running, <small>R.APP</small> is started, the file
+is either restored (if it is a saved workspace), sourced into <small>R.APP</small> or
+opened in the selected editor. Whether the file is opened or sourced is
+specified by a Preference setting in the StartUp Preference Pane.
+</p>
+<p>Note: At this point opening a file in the editor before <small>R.APP</small> is finished
+loading will crash <small>R.APP</small>.
+</p>
+<p>While <small>R.APP</small> is running, drag &amp; drop of a directory updates the working
+directory. Drag &amp; drop of a file sources or opens the file in the
+selected editor. Double clicking on files bound to (&quot;Open With ...&quot;) R,
+if <small>R.APP</small> is not running, <small>R.APP</small> is started and the file is sourced or
+opened in editor. If <small>R.APP</small> is running, the file is opened in the
+editor.
+</p> 
+<hr>
+<a name="Help-system"></a>
+<div class="header">
+<p>
+Next: <a href="#History" accesskey="n" rel="next">History</a>, Previous: <a href="#Drag-_0026-drop" accesskey="p" rel="prev">Drag &amp; drop</a>, Up: <a href="#General-Features" accesskey="u" rel="up">General Features</a> &nbsp; </p>
+</div>
+<a name="Help-system-1"></a>
+<h4 class="subsection">2.4.9 Help system</h4>
+
+<p>The Help screen allows a user to go back or forward to previous help
+pages.  It is possible to print help pages. If a help topic is not
+found, a pop-up window allows to exit the help search or expand the
+search to a fuzzy/approximate search.
+</p>		
+<hr>
+<a name="History"></a>
+<div class="header">
+<p>
+Next: <a href="#Authentication-and-_002elibPaths" accesskey="n" rel="next">Authentication and .libPaths</a>, Previous: <a href="#Help-system" accesskey="p" rel="prev">Help system</a>, Up: <a href="#General-Features" accesskey="u" rel="up">General Features</a> &nbsp; </p>
+</div>
+<a name="History-1"></a>
+<h4 class="subsection">2.4.10 History</h4>
+
+<p><small>R.APP</small> uses history files that are (superset) compatible with history
+files created by R. Multiline support remains available from inside
+<small>R.APP</small>. Multiline is particularly useful when using the
+<kbd><span class="key">Command</span>-<span class="key">Return</span></kbd> feature while editing an R
+script. Import and export allows storing and importing history from
+files visible in the Mac OS Finder. Multiline is preserved. This can be
+set through the StartUp Preference Panel. Default number of kept history
+entries is 250. A variety of history entry cleanup modes is possible.
+At a minimum it is suggested to select &quot;Cleanup history entries&quot;. It&rsquo;s
+optional to select removal of duplicate entries and strip comments.
+</p>
+<p>Note: Command-line <acronym>R</acronym> stores history in a file usually called
+<samp>.Rhistory</samp>. It is suggested to use a different name for the
+<small>R.APP</small> history file, and the default is <samp>.Rapp.history</samp>.
+</p>
+<p>Note that the functions <code>loadhistory()</code>, <code>savehistory()</code> and
+hence <code>history()</code> are not currently supported in <small>R.APP</small>.
+</p>
+<hr>
+<a name="Authentication-and-_002elibPaths"></a>
+<div class="header">
+<p>
+Previous: <a href="#History" accesskey="p" rel="prev">History</a>, Up: <a href="#General-Features" accesskey="u" rel="up">General Features</a> &nbsp; </p>
+</div>
+<a name="Authentication-and-_002elibPaths-1"></a>
+<h4 class="subsection">2.4.11 Authentication and .libPaths</h4>
+<p>The official <acronym>CRAN</acronym> binaries come pre-packaged in such a way that
+administrator have sufficient privileges to update R and install
+packages system-wide. However, the default Unix build requires
+root-authentication for package installation and other administrative
+tasks. As it is not feasible to run the GUI as root, we provide the
+possibility to authenticate system commands issued from the GUI. The
+authentication requires an administrator login and causes all subsequent
+system commands to be executed as root. Use with care!
+</p>
+<p>In order to allow non-administrators to maintain their own set of
+packages, <small>R.APP</small> optionally adds <code>~/Library/R/x.y/library</code> to the
+<code>.libPaths</code> (see start-up preferences, <code>x.y</code> denotes the R
+version without patch level). It is possible to use the Package
+Installer to install packages either globally (admin users only) or for
+the current user only.  (This is the same mechanism for personal library
+directories described in the main <acronym>R</acronym> documentation, but with a location
+specific to <acronym>CRAN</acronym>-like builds of <acronym>R</acronym> on OS X.)
+</p>
+<p>Note that user-local packages are only used when the corresponding
+preference option is enabled. The default for admin users is to use
+system-wide directories, for non-admin users the personal library
+directory will be used.
+</p>
+<hr>
+<a name="The-Menus"></a>
+<div class="header">
+<p>
+Next: <a href="#Preferences" accesskey="n" rel="next">Preferences</a>, Previous: <a href="#General-Features" accesskey="p" rel="prev">General Features</a>, Up: <a href="#R_002eapp" accesskey="u" rel="up">R.app</a> &nbsp; </p>
+</div>
+<a name="The-Menus-1"></a>
+<h3 class="section">2.5 The Menus</h3>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Application-Menu" accesskey="1">Application Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#File-Menu" accesskey="2">File Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Edit-Menu" accesskey="3">Edit Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Misc-Menu" accesskey="4">Misc Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Workspace-Menu" accesskey="5">Workspace Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Packages-Menu" accesskey="6">Packages Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#The-Help-Menu" accesskey="7">The Help Menu</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<a name="Application-Menu"></a>
+<div class="header">
+<p>
+Next: <a href="#File-Menu" accesskey="n" rel="next">File Menu</a>, Previous: <a href="#The-Menus" accesskey="p" rel="prev">The Menus</a>, Up: <a href="#The-Menus" accesskey="u" rel="up">The Menus</a> &nbsp; </p>
+</div>
+<a name="Application-Menu-1"></a>
+<h4 class="subsection">2.5.1 Application Menu</h4>
+<p>The Application menu is the first one after the main Apple Menu: it is
+labelled <code>R</code>.
+</p>
+<p>With this menu you can access three items: 1. the About box, which tells
+you which version of R is currently in use, 2. Check for updates, which
+search on <acronym>CRAN</acronym> if a new version of the binary distribution of <acronym>R</acronym>
+for Mac OS X is available (you need an Internet connection), 3. you can
+access the Preferences (see <a href="#Preferences">Preferences</a>).
+</p>
+<hr>
+<a name="File-Menu"></a>
+<div class="header">
+<p>
+Next: <a href="#Edit-Menu" accesskey="n" rel="next">Edit Menu</a>, Previous: <a href="#Application-Menu" accesskey="p" rel="prev">Application Menu</a>, Up: <a href="#The-Menus" accesskey="u" rel="up">The Menus</a> &nbsp; </p>
+</div>
+<a name="File-Menu-1"></a>
+<h4 class="subsection">2.5.2 File Menu</h4>
+<p>This menu provides standard functionalities. 
+The <em>open</em> command is associated to the action  <em>Source <acronym>R</acronym> code</em>, which means that you can select a file, which is a script, and it will be executed
+in <acronym>R</acronym>. This is a interface to the <acronym>R</acronym> source command <code>source</code>.
+</p>
+<hr>
+<a name="Edit-Menu"></a>
+<div class="header">
+<p>
+Next: <a href="#Misc-Menu" accesskey="n" rel="next">Misc Menu</a>, Previous: <a href="#File-Menu" accesskey="p" rel="prev">File Menu</a>, Up: <a href="#The-Menus" accesskey="u" rel="up">The Menus</a> &nbsp; </p>
+</div>
+<a name="Misc-Menu-1"></a>
+<h4 class="subsection">2.5.3 Misc Menu</h4>
+<p>Apart for standard functionalities, the only relevant item in this menu
+is <em>Edit Object</em> which is an interface to the <acronym>R</acronym> <code>edit</code>
+function.
+</p>
+<hr>
+<a name="Misc-Menu"></a>
+<div class="header">
+<p>
+Next: <a href="#Workspace-Menu" accesskey="n" rel="next">Workspace Menu</a>, Previous: <a href="#Edit-Menu" accesskey="p" rel="prev">Edit Menu</a>, Up: <a href="#The-Menus" accesskey="u" rel="up">The Menus</a> &nbsp; </p>
+</div>
+<a name="Misc-Menu-2"></a>
+<h4 class="subsection">2.5.4 Misc Menu</h4>
+<p>With this menu you can load and save the history of commands typed in the <acronym>R</acronym> Console or view what&rsquo;s currently inside.
+You can also change the current working directory, let <acronym>R</acronym> show you the current working directory or set it back to the
+startup directory. From release 1.9.0 of <acronym>R</acronym> the current working directory is also shown on the main window bar.
+</p>
+<hr>
+<a name="Workspace-Menu"></a>
+<div class="header">
+<p>
+Next: <a href="#Packages-Menu" accesskey="n" rel="next">Packages Menu</a>, Previous: <a href="#Misc-Menu" accesskey="p" rel="prev">Misc Menu</a>, Up: <a href="#The-Menus" accesskey="u" rel="up">The Menus</a> &nbsp; </p>
+</div>
+<a name="Workspace-Menu-1"></a>
+<h4 class="subsection">2.5.5 Workspace Menu</h4>
+
+<p>Here you find self explanatory menu items for manage your workspace in
+<acronym>R</acronym>. You can either load and save the workspace also by specifying file
+name. All of these are interfaces to the <code>load</code> and
+<code>save</code> <acronym>R</acronym> commands.  The only relevant item, which is specific
+to this GUI, is <em>Browse workspace</em> which invokes the
+<code>browseEnv()</code> function in <acronym>R</acronym>. This will open a window with a
+summary description of the objects in your workspace. Recursive objects
+(like lists, data.frame etc) can be expanded (one level only though).
+</p>
+<hr>
+<a name="Packages-Menu"></a>
+<div class="header">
+<p>
+Next: <a href="#The-Help-Menu" accesskey="n" rel="next">The Help Menu</a>, Previous: <a href="#Workspace-Menu" accesskey="p" rel="prev">Workspace Menu</a>, Up: <a href="#The-Menus" accesskey="u" rel="up">The Menus</a> &nbsp; </p>
+</div>
+<a name="Packages-Menu-1"></a>
+<h4 class="subsection">2.5.6 Packages Menu</h4>
+
+<p>Using this menu you can have access to the list of packages and
+data-sets installed on your system and to the ones on <acronym>CRAN</acronym> or on the
+Bioconductor site.
+</p>
+<p>With the first two menus you can load and detach packages and data-set
+from the workspace.  Let&rsquo;s start with the <em>Package Manager</em>. This
+opens a window with several columns displayed.  For each package on your
+system you can see a check box, the current status of the package
+(loaded/not loaded), its name and the package description text. You use
+the check box to select/de-select the packages you want.  On window
+closure, the checked packaged will be loaded and the unchecked ones (if
+loaded) will the detached (not completely as on Mac OS X you cannot
+unload completely dynamic libraries).
+</p>
+<p>The same applies to the <em>Dataset Manager</em> menu but for data-sets.
+</p>
+<p>You can than get or update packages <acronym>CRAN</acronym> either in binary or source
+format. Daily build of <acronym>CRAN</acronym> packages are available for Mac OS X. If
+you don&rsquo;t know how to build <acronym>R</acronym> itself from source, you&rsquo;ll probably be
+unable to build packages from source on your own.  In this case, you
+should always choose for the binary option. These binary packages work
+(for sure!) for the release version of <acronym>R</acronym> for Mac OS X you find on
+<acronym>CRAN</acronym> even though it is not excluded that they will work for other
+prebuilt versions of <acronym>R</acronym>.
+</p>
+
+<p>When you attempt to install packages from <acronym>CRAN</acronym>, <acronym>R</acronym> first tries to
+get a connection to the Internet to download the list of available
+packages. Than a window will open similar to the one in the package
+manager with the only difference that for each package there is also the
+information concerning the version of the package installed on your
+system (if any) and the version of the prebuilt package available on
+<acronym>CRAN</acronym>. When you close the window, the select packages will be
+downloaded.
+</p>
+<p>The same strategy applies to the Bioconductor menu item, with some more
+options typical of the Bioconductor way of managing packages.
+</p>
+<p>For some reason it could happen that you have the package you want to
+install (either in binary or source form) on one of your local disks, or
+even a directory containing a package source. You can use the last menu
+to do the task of installing the package.  Having a package in a
+directory form usually applies to people that are developing packages
+themselves.
+</p>
+<p>Note that packages which do not contain C, C++, Fortran &hellip; code
+which needs to be compiled can be compiled from their sources with no
+additional tools.
+</p>
+<p>For more information on this topic see also <a href="#How-to-install-packages">How to install packages</a>.
+</p>
+<hr>
+<a name="The-Help-Menu"></a>
+<div class="header">
+<p>
+Previous: <a href="#Packages-Menu" accesskey="p" rel="prev">Packages Menu</a>, Up: <a href="#The-Menus" accesskey="u" rel="up">The Menus</a> &nbsp; </p>
+</div>
+<a name="The-Help-Menu-1"></a>
+<h4 class="subsection">2.5.7 The Help Menu</h4>
+<p>Using this menu you can open the on-line manuals (<em>R Help</em>), read this FAQ and  review the latest changes, bug fixes and new features of R for Mac OS X (<em>What&rsquo;s new in this version</em>).
+There are also interfaces to the R <em>help</em> and <em>help.search</em> functions as well as the <em>example</em> function. 
+</p>
+<hr>
+<a name="Preferences"></a>
+<div class="header">
+<p>
+Next: <a href="#R_002eapp-Bugs" accesskey="n" rel="next">R.app Bugs</a>, Previous: <a href="#The-Menus" accesskey="p" rel="prev">The Menus</a>, Up: <a href="#R_002eapp" accesskey="u" rel="up">R.app</a> &nbsp; </p>
+</div>
+<a name="Preferences-1"></a>
+<h3 class="section">2.6 Preferences</h3>
+<p>You can set several aspects of the <acronym>R</acronym> GUI via preferences. You can access the Preferences window via the Application menu when the
+<acronym>R</acronym> Console is open.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Startup" accesskey="1">Startup</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<a name="Startup"></a>
+<div class="header">
+<p>
+Previous: <a href="#Preferences" accesskey="p" rel="prev">Preferences</a>, Up: <a href="#Preferences" accesskey="u" rel="up">Preferences</a> &nbsp; </p>
+</div>
+<a name="Startup-1"></a>
+<h4 class="subsection">2.6.1 Startup</h4>
+<p>The Drag &amp; drop section defines drag &amp; drop behaviour during R
+start-up. Options are to open file in an editor or to source
+file. Default is to source the file.  The Default Library Paths section
+enables, on next start-up of R, to add a directory, e.g.
+<samp>~/R/Library</samp>, to the library search/install path. The initial
+working directory section can be used to enforce the initial working
+directory. If no directory is specified, this directory is used as the
+default. The Change button allows to select a new directory. The Always
+apply selection will enforce the specified intial start-up
+directory. The history section controls reading of the history file on
+startup. If selected, R will read history file on start-up.  The R
+history file field is used to read and store history from/to. This field
+can be edited to allow selecting files starting with a period (e.g.
+<samp>.Rapp.history</samp>). If you want the same history file regardless of
+your selected working directory, specify a fixed path (e.g.
+<samp>~/.Rapp.history</samp>).  The Default button will reset the history file
+name to its default value. The History handling area allows setting of
+the max number of entries to be kept in history, to remove duplicate
+entries, to cleanup history entries (this is very useful to remove blank
+lines when submitting multiple lines using Command-Return) and the strip
+comments before the entry is added to the history.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Editor-Preferences" accesskey="1">Editor Preferences</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Syntax-Colors" accesskey="2">Syntax Colors</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Console-Colors" accesskey="3">Console Colors</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Quartz-window" accesskey="4">Quartz window</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<a name="Editor-Preferences"></a>
+<div class="header">
+<p>
+Next: <a href="#Syntax-Colors" accesskey="n" rel="next">Syntax Colors</a>, Previous: <a href="#Startup" accesskey="p" rel="prev">Startup</a>, Up: <a href="#Startup" accesskey="u" rel="up">Startup</a> &nbsp; </p>
+</div>
+<a name="Editor-Preferences-1"></a>
+<h4 class="subsubsection">2.6.1.1 Editor Preferences</h4>
+<p>If Built-in editor is selected, allows enable/disable of syntax
+coloring, brace highlighting and the showing of line numbers. If
+External editor is selected, allows specifying which external
+editor. That editor will be used for all editing functions. It runs as a
+separate application. Using an external editor means that R will never
+wait while editing (e.g. <code>edit(A)</code> will return immediately and
+open <code>A</code> in the external editor. Command-E and Command-Return like
+functionality would need to be implemented by other means,
+i.e. AppleScript. The external editor can be any application
+(e.g. SubEthaEdit, TextWrangler, BBEdit, Smultron, etc) or can be
+activated through a shell script (e.g. see or smultron, both give better
+control on how to start the editor).
+</p>					
+<hr>
+<a name="Syntax-Colors"></a>
+<div class="header">
+<p>
+Next: <a href="#Console-Colors" accesskey="n" rel="next">Console Colors</a>, Previous: <a href="#Editor-Preferences" accesskey="p" rel="prev">Editor Preferences</a>, Up: <a href="#Startup" accesskey="u" rel="up">Startup</a> &nbsp; </p>
+</div>
+<a name="Syntax-Colors-1"></a>
+<h4 class="subsubsection">2.6.1.2 Syntax Colors</h4>
+<p>Enables to select the syntax colors.
+</p>
+<hr>
+<a name="Console-Colors"></a>
+<div class="header">
+<p>
+Next: <a href="#Quartz-window" accesskey="n" rel="next">Quartz window</a>, Previous: <a href="#Syntax-Colors" accesskey="p" rel="prev">Syntax Colors</a>, Up: <a href="#Startup" accesskey="u" rel="up">Startup</a> &nbsp; </p>
+</div>
+<a name="Console-Colors-1"></a>
+<h4 class="subsubsection">2.6.1.3 Console Colors</h4>
+<p>Enables to select the input/output colors in R Console.
+</p>
+<hr>
+<a name="Quartz-window"></a>
+<div class="header">
+<p>
+Previous: <a href="#Console-Colors" accesskey="p" rel="prev">Console Colors</a>, Up: <a href="#Startup" accesskey="u" rel="up">Startup</a> &nbsp; </p>
+</div>
+<a name="Quartz-window-1"></a>
+<h4 class="subsubsection">2.6.1.4 Quartz window</h4>
+<p>Currently the the Quartz preference pane is not being used.
+</p>
+
+<hr>
+<a name="R_002eapp-Bugs"></a>
+<div class="header">
+<p>
+Previous: <a href="#Preferences" accesskey="p" rel="prev">Preferences</a>, Up: <a href="#R_002eapp" accesskey="u" rel="up">R.app</a> &nbsp; </p>
+</div>
+<a name="R_002eapp-Bugs-1"></a>
+<h3 class="section">2.7 R.app Bugs</h3>
+<p>On Unix systems a bug report can be generated using the function
+<code>bug.report()</code>.  Alternatively the bug report can be submitted to
+the Web page at <a href="http://bugs.R-project.org/">http://bugs.R-project.org/</a>.
+</p>
+<p>Before you file a bug report, please try to reproduce it using both
+<small>R.APP</small> and the console version of <acronym>R</acronym> (if applicable). If the bug if
+<small>R.APP</small>-specific, please report the bug to the mailing list
+<a href="mailto:R-SIG-Mac@R-project.org">R-SIG-Mac@R-project.org</a> instead. Please do NOT forget to
+mention the exact <small>R.APP</small> version and include the output of
+<code>sessionInfo()</code>.
+</p>
+<p>In any circumstances, in case of a crash, please report the crash.log
+for the <em>R.bin</em> and/or <em>R.app</em> application. You can get this
+crash.log using the <em>Console.app</em> located inside
+<em>/Applications/Utilities</em> (select &lsquo;1&rsquo; in the crash menu in the R
+console at the time of the crash (if you see that menu) to generate a
+crash report).
+</p>
+<hr>
+<a name="How-to-install-packages"></a>
+<div class="header">
+<p>
+Next: <a href="#R-and-external-applications" accesskey="n" rel="next">R and external applications</a>, Previous: <a href="#R_002eapp" accesskey="p" rel="prev">R.app</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+<a name="How-to-install-packages-1"></a>
+<h2 class="chapter">3 How to install packages</h2>
+<p>You have several options for installing new packages on your system. We
+discuss here only the GUI interface to the standard <acronym>R</acronym> functions like
+<code>install.packages()</code>. For the <acronym>R</acronym> functions see the standard <acronym>R</acronym>
+documentation.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Which-kind-of-packages-can-I-install-using-the-GUI_003f" accesskey="1">Which kind of packages can I install using the GUI?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Installation-of-packages" accesskey="2">Installation of packages</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Installation-of-source-packages" accesskey="3">Installation of source packages</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Where-are-the-packages-I_0027ve-installed_003f" accesskey="4">Where are the packages I've installed?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<a name="Which-kind-of-packages-can-I-install-using-the-GUI_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#Installation-of-packages" accesskey="n" rel="next">Installation of packages</a>, Previous: <a href="#How-to-install-packages" accesskey="p" rel="prev">How to install packages</a>, Up: <a href="#How-to-install-packages" accesskey="u" rel="up">How to install packages</a> &nbsp; </p>
+</div>
+<a name="Which-kind-of-packages-can-I-install-using-the-GUI"></a>
+<h3 class="section">3.1 Which kind of packages can I install using the GUI</h3>
+
+<p>GUI provides direct access/download/installation of packages located on
+<acronym>CRAN</acronym>, the Bioconductor repositories or a custom repository. You can
+also install packages from local files, either binary of source
+packages, as explained below. Otherwise you can use the appropriate <acronym>R</acronym>
+commands (see <code>install.packages</code>) to install packages from a
+specific location other than the above mentioned ones.
+</p>
+<hr>
+<a name="Installation-of-packages"></a>
+<div class="header">
+<p>
+Next: <a href="#Installation-of-source-packages" accesskey="n" rel="next">Installation of source packages</a>, Previous: <a href="#Which-kind-of-packages-can-I-install-using-the-GUI_003f" accesskey="p" rel="prev">Which kind of packages can I install using the GUI?</a>, Up: <a href="#How-to-install-packages" accesskey="u" rel="up">How to install packages</a> &nbsp; </p>
+</div>
+<a name="Installation-of-packages-1"></a>
+<h3 class="section">3.2 Installation of packages</h3>
+<p><acronym>R</acronym> for Mac OS X recognizes packages in two forms: <em>binary</em> packages and <em>source</em> packages.
+</p>
+<p>Binary packages are <acronym>R</acronym> packages in ready-to-use form, such that no
+additional tools are necessary for their use. Binary packages are
+specific for a given <acronym>R</acronym> version and OS. <acronym>CRAN</acronym> and Bioconductor
+repositories offer <acronym>R</acronym> packages in binary form for the last released
+<acronym>R</acronym> version. Unlike on other Unix systems, R for Mac OS X installs
+binary packages by default, i.e. <code>install.packages</code> will look for
+binary repositories unless instructed otherwise.
+</p>
+<p>Source packages are general in that they can be used on any platform and
+OS supported by <acronym>R</acronym>, but they need to be processed and/or compiled
+before they can be used. Additional tools may be necessary for that, see
+see <a href="#Installation-of-source-packages">Installation of source packages</a> for details. For most users
+binary packages are sufficient (if available and current).
+</p>
+<p>On Mac OS X packages can be installed in three ways:
+</p>
+<ul>
+<li> Using <em>Package Manager</em> in the <small>R.APP</small> GUI (recommended for most Mac users)
+
+</li><li> Using <code>install.packages</code> command in <acronym>R</acronym>
+
+</li><li> Using <code>R CMD INSTALL</code> command in the shell (aka <em>Terminal</em>)
+</li></ul>
+
+<p>The latter two methods are common to all Unix systems and as such described in the general R documentation. In the following we will concentrate on using the <em>Package Installer</em>.
+</p>
+<p>If you decide to install packages you should use the <em>Packages &amp; Data</em> menu of the GUI, in particular the sub-item <em>Package Installer</em>. Select the repository, package type (binary or source) and press <em>Get List</em>. This will connect to the repository through the Internet and a list all packages available for installation. The list tells you if a package is already installed on your system, the version of the package available on <acronym>CRAN</acronym> and the version of the same package if already installed. 
+</p>
+<p>You can use the search field to narrow the list of package to those matching your search criteria. Additionally you can use the search list menu to list only packages that are already installed on your system which is useful for comparing versions of available and installed packages. Finally, you can filter down to packages that have been installed by a previous <acronym>R</acronym> version as to allow a simple upgrade.
+</p>
+<p>Select any package you want to install and press the <em>Install</em> button. You can follow the progress of the installation in the <acronym>R</acronym> Console. Once the required packages are installed, the list is re-loaded to reflect the versions of newly installed packages.
+</p>
+<p>If you want to update all packages to the latest version, select the repository to use for the packages and press <em>Update All</em>. <acronym>R</acronym> will automatically determine the list of packages that can be updated and present you with a selection of packages to update.
+</p>
+<p>You can also download any other package from the Internet yourself and decide to install it from source. In such case select one of the local entries 
+in the top left list and press the <em>Install</em> button (which is now enabled).
+</p>
+<p>Packages can also be installed from other repositories by selecting <em>Other Repository</em> source. Enter the repository URL in the adjacent field. Note that currently the Package Installer assumes that custom repositories maintain proper hierarchy for both source and binary packages the same way <acronym>CRAN</acronym> does when using <em>Other Repository</em>. If your custom repository is flat, select <em>Other Directory URL</em> in the installation type list.
+</p>
+<hr>
+<a name="Installation-of-source-packages"></a>
+<div class="header">
+<p>
+Next: <a href="#Where-are-the-packages-I_0027ve-installed_003f" accesskey="n" rel="next">Where are the packages I've installed?</a>, Previous: <a href="#Installation-of-packages" accesskey="p" rel="prev">Installation of packages</a>, Up: <a href="#How-to-install-packages" accesskey="u" rel="up">How to install packages</a> &nbsp; </p>
+</div>
+<a name="Installation-of-source-packages-1"></a>
+<h3 class="section">3.3 Installation of source packages</h3>
+
+<p>Source packages which do not contain compiled code can (with rare
+exceptions) be installed with no additional tools.
+</p>
+<p>Packages with compiled code (or some with Unix scripts) need the tools
+used to build <acronym>R</acronym> itself discussed in the &lsquo;R Installation and
+Administation Manual&rsquo;, and these will need to be in the &lsquo;<samp>PATH</samp>&rsquo; as
+seen from <small>R.APP</small> or command-line <acronym>R</acronym>.  For <small>R.APP</small> you may need to add
+e.g. <samp>/usr/local/bin</samp> and it is usually most convenient to use
+command-line <acronym>R</acronym>.
+</p>
+<p>If using a CRAN binary install of <acronym>R</acronym> the compilers may not be in the
+same place or have the same names as on the CRAN build machine.  Look at
+file <samp>/Library/Frameworks/R.framework/Resources/etc/Makeconf</samp>,
+which will contain lines like
+</p><div class="example">
+<pre class="example">CC = gcc -arch x86_64 -std=gnu99
+CXX = g++ -arch x86_64
+CXXCPP = g++ -arch x86_64 -E
+FC = gfortran -arch x86_64
+F77 = gfortran -arch x86_64
+OBJC = clang -arch x86_64
+OBJCXX = clang++ -arch x86_64
+</pre></div>
+
+<p>You can either edit that file, or override settings in file
+<samp>~/.R/Makevars</samp>: see the section &lsquo;Customizing package compilation&rsquo;
+of the &lsquo;R Installation and Administration Manual&rsquo;.
+</p>
+<hr>
+<a name="Where-are-the-packages-I_0027ve-installed_003f"></a>
+<div class="header">
+<p>
+Previous: <a href="#Installation-of-source-packages" accesskey="p" rel="prev">Installation of source packages</a>, Up: <a href="#How-to-install-packages" accesskey="u" rel="up">How to install packages</a> &nbsp; </p>
+</div>
+<a name="Where-are-the-packages-I_0027ve-installed_003f-1"></a>
+<h3 class="section">3.4 Where are the packages I&rsquo;ve installed?</h3>
+<p>The main library of packages is the one located inside the R.framework
+(in <code>/Library/Frameworks/R.framework/Resources/library</code>). This
+library contains the packages (base and recommended ones) distributed
+along with <acronym>R</acronym>. Only administrators are allowed to install packages in
+this system-wide directory. Note that this directory is
+<acronym>R</acronym>-version-specific. Optionally users can install personal packages in
+their <code>~/Library/R/x.y/library</code> directory where <code>x.y</code> denotes
+the R version without the patch level (such as 3.0) &ndash; see the startup
+preferences in <small>R.APP</small>.
+</p>
+<p>The Package Installer performs installation to either place depending on
+the installation target setting. The default for an admin users is to
+install packages system-wide, whereas the default for regular users is
+their personal library tree.
+</p>
+<p>If you use <code>install.packages</code> <acronym>R</acronym> function instead of
+the Package Installer, the regular Unix behavior applies (see help pages
+for details). For default setup this means that the packages are
+installed according to the startup preference setting. You can check the
+current defaults by issuing
+</p><div class="example">
+<pre class="example">.libPaths()
+</pre></div>
+
+<hr>
+<a name="R-and-external-applications"></a>
+<div class="header">
+<p>
+Next: <a href="#Quartz-device" accesskey="n" rel="next">Quartz device</a>, Previous: <a href="#How-to-install-packages" accesskey="p" rel="prev">How to install packages</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+<a name="R-and-external-applications-1"></a>
+<h2 class="chapter">4 R and external applications</h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#AppleScript-support" accesskey="1">AppleScript support</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#External-editors" accesskey="2">External editors</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Finder-actions" accesskey="3">Finder actions</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<a name="AppleScript-support"></a>
+<div class="header">
+<p>
+Next: <a href="#External-editors" accesskey="n" rel="next">External editors</a>, Previous: <a href="#R-and-external-applications" accesskey="p" rel="prev">R and external applications</a>, Up: <a href="#R-and-external-applications" accesskey="u" rel="up">R and external applications</a> &nbsp; </p>
+</div>
+<a name="AppleScript-support-1"></a>
+<h3 class="section">4.1 AppleScript support</h3>
+
+
+<p><acronym>R</acronym> has partial support for Apple-Scripts.  At the moment <acronym>R</acronym> can be
+invoked and asked to run commands from an AppleScript script.  What
+follows is an example of script that interacts with <acronym>R</acronym>. It first
+invokes <acronym>R</acronym> and then sends commands to <acronym>R</acronym> with the <code>cmd</code>
+applescript command.
+</p>
+<div class="example">
+<pre class="example">set CommandLine to &quot;R.Version()&quot;
+try
+	tell application &quot;R&quot;
+		activate
+		with timeout of 90000 seconds
+			cmd CommandLine
+			cmd &quot;Sys.getenv()&quot;
+			cmd &quot;print(\&quot;HelloWorld!\&quot;)&quot;
+		end timeout
+	end tell
+end try
+</pre></div>
+
+<p>In the above, <code>cmd</code> is the (only) applescript command in the <acronym>R</acronym> dictionary that is 
+used to tell <acronym>R</acronym> to execute an <acronym>R</acronym> command in the R Console. The syntax is 
+</p><div class="example">
+<pre class="example">cmd &lt;command string&gt;
+</pre></div>
+<p>where command string have to be in quotes. Actually, the output of the command
+is not sent back to the application that is calling <acronym>R</acronym> but to the <acronym>R</acronym> Console directly.
+</p>
+<p>There are some issues. The first is that if <acronym>R</acronym> is still not running,
+it will take a while (depending on how fast your machine is) to
+startup. In the meanwhile the script sends commands without waiting and
+it could happen that some commands are missed by <acronym>R</acronym>, i.e. they arrive
+before <acronym>R</acronym> is ready to receive applescript commands. The second issue,
+is that it could be that the applescript calls a bad version of
+<acronym>R</acronym>. This could happen if you have an old version of <acronym>R</acronym> (for example
+the old Carbon <acronym>R</acronym>) installed on your System.
+</p>
+<p>As an example, we report here a small script that asks <acronym>R</acronym> to <code>source</code> a file using a file dialog.
+</p><div class="example">
+<pre class="example">set file_to_source to (choose file with prompt &quot;Choose file to source&quot;) as alias
+
+try
+	tell application &quot;R&quot;
+		activate
+		with timeout of 90000 seconds
+			cmd &quot;source(\&quot;&quot; &amp; file_to_source &amp; &quot;\&quot;)&quot;
+		end timeout
+	end tell
+end try
+</pre></div>
+
+
+<hr>
+<a name="External-editors"></a>
+<div class="header">
+<p>
+Next: <a href="#Finder-actions" accesskey="n" rel="next">Finder actions</a>, Previous: <a href="#AppleScript-support" accesskey="p" rel="prev">AppleScript support</a>, Up: <a href="#R-and-external-applications" accesskey="u" rel="up">R and external applications</a> &nbsp; </p>
+</div>
+<a name="External-editors-1"></a>
+<h3 class="section">4.2 External editors</h3>
+<p><acronym>R</acronym> accepts the Apple Event command <em>open</em>. This means than an
+external editor can communicate with <acronym>R</acronym> sending portions of <acronym>R</acronym> code
+to execute via files. This is the approach used by the <acronym>R</acronym>-Tcl Mode in
+Alpha X (see <a href="http://www.kelehers.org/alpha/">http://www.kelehers.org/alpha/</a>).
+</p>
+
+<hr>
+<a name="Finder-actions"></a>
+<div class="header">
+<p>
+Previous: <a href="#External-editors" accesskey="p" rel="prev">External editors</a>, Up: <a href="#R-and-external-applications" accesskey="u" rel="up">R and external applications</a> &nbsp; </p>
+</div>
+<a name="Finder-actions-1"></a>
+<h3 class="section">4.3 Finder actions</h3>
+
+<p>Dragging a file on the <acronym>R</acronym> icon, causes <acronym>R</acronym> to source this file via
+the <code>source</code> <acronym>R</acronym> command or, if the file is an <acronym>R</acronym> image data
+file RDX1 or RDX2 (normally files with extension <samp>.rda</samp> or
+<samp>.RData</samp>), the data is loaded in the workspace and every object
+with the same name in the workspace is overwritten without
+notice. Loading a data file is equivalent to the <acronym>R</acronym> command
+<code>load</code>.  At the moment there is no control over the file types,
+i.e. dragging wrong files (i.e. files that are not <acronym>R</acronym> scripts or image
+data) simply gives an error. It is up to the user to <em>do the right
+thing</em>.
+</p>
+<p>If <acronym>R</acronym> is not yet running this action causes <acronym>R</acronym> to startup.
+</p>
+<hr>
+<a name="Quartz-device"></a>
+<div class="header">
+<p>
+Next: <a href="#Tcl_002fTk-issues" accesskey="n" rel="next">Tcl/Tk issues</a>, Previous: <a href="#R-and-external-applications" accesskey="p" rel="prev">R and external applications</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+<a name="Quartz-device-1"></a>
+<h2 class="chapter">5 Quartz device</h2>
+
+<p>The <code>quartz()</code> device is the native graphic device in R for Mac OS
+X. Its name derives from Apple&rsquo;s Quartz Technology which is essentially
+similar to PDF rendering. 
+</p>
+<p>The <code>quartz()</code> device can be used from <small>R.APP</small> or a suitable build of <acronym>R</acronym>
+running at the Mac console.  Where supported it is the default graphics
+device.
+</p>
+ 
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Interactive-mode" accesskey="1">Interactive mode</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Saving-the-image" accesskey="2">Saving the image</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Copying-the-image-into-the-clipboard" accesskey="3">Copying the image into the clipboard</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<a name="Interactive-mode"></a>
+<div class="header">
+<p>
+Next: <a href="#Saving-the-image" accesskey="n" rel="next">Saving the image</a>, Previous: <a href="#Quartz-device" accesskey="p" rel="prev">Quartz device</a>, Up: <a href="#Quartz-device" accesskey="u" rel="up">Quartz device</a> &nbsp; </p>
+</div>
+<a name="Interactive-mode-1"></a>
+<h3 class="section">5.1 Interactive mode</h3>
+
+<p>The quartz device allows for interaction. You can use both
+<code>identify</code> and <code>locator</code> functions.  To break the
+sequence you should right/control-click or hit the <tt class="key">ESC</tt> key.
+</p>
+<hr>
+<a name="Saving-the-image"></a>
+<div class="header">
+<p>
+Next: <a href="#Copying-the-image-into-the-clipboard" accesskey="n" rel="next">Copying the image into the clipboard</a>, Previous: <a href="#Interactive-mode" accesskey="p" rel="prev">Interactive mode</a>, Up: <a href="#Quartz-device" accesskey="u" rel="up">Quartz device</a> &nbsp; </p>
+</div>
+<a name="Saving-the-image-1"></a>
+<h3 class="section">5.2 Saving the image</h3>
+
+<p>You can save the content of the quartz device window into a PDF file,
+via the <acronym>R</acronym> menu when the device window has focus.  This is a simple
+way to export high quality graphics from <acronym>R</acronym> into other applications on
+Mac OS X as graphics is PDF-based (so are almost all applications
+available). For other solutions, see (see <a href="#Copying-the-image-into-the-clipboard">Copying the image into the clipboard</a>) and the <code>quartz.save</code> function.
+</p>
+<hr>
+<a name="Copying-the-image-into-the-clipboard"></a>
+<div class="header">
+<p>
+Previous: <a href="#Saving-the-image" accesskey="p" rel="prev">Saving the image</a>, Up: <a href="#Quartz-device" accesskey="u" rel="up">Quartz device</a> &nbsp; </p>
+</div>
+<a name="Copying-the-image-into-the-clipboard-1"></a>
+<h3 class="section">5.3 Copying the image into the clipboard</h3>
+
+<p>You can copy the content of the quartz device window in the clipboard to
+make the resulting image available for pasting into other
+applications. The clipboard will contain both a PDF version and a bitmap
+version of the quartz device window. Which version will be used depends
+on the pasting applications, most modern application will prefer the PDF
+version which is of higher quality as it supports vector graphics.  
+</p>
+
+
+<hr>
+<a name="Tcl_002fTk-issues"></a>
+<div class="header">
+<p>
+Next: <a href="#Internationalization-of-the-R_002eapp" accesskey="n" rel="next">Internationalization of the R.app</a>, Previous: <a href="#Quartz-device" accesskey="p" rel="prev">Quartz device</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+<a name="Tcl_002fTk-issues-1"></a>
+<h2 class="chapter">6 Tcl/Tk issues</h2>
+
+<p>Each binary distribution of <acronym>R</acronym> available through <acronym>CRAN</acronym> is built to
+use the X11 implementation of Tcl/Tk.  Of course a X windows server has
+to be started first: this should happen automatically on OS X, provided
+it has been installed (it needs a separate install on Mountain Lion and
+later).  The first time things are done in the X server there can be a
+long delay whilst a font cache is constructed; starting the server can
+take several seconds.
+</p>
+<p>Mac OS X 10.9 and higher no longer include X11
+by default and it has to be obtained separately from
+<a href="http://xquartz.macosforge.org">http://xquartz.macosforge.org</a>.
+</p>
+<p>If you don&rsquo;t like the X11 style of widgets and use command-line <acronym>R</acronym> you
+would probably want to build R using the Aqua version of Tcl/Tk (see the
+&lsquo;R Installation and Administration Manual&rsquo;). Note, however, that such
+builds do not work when used in the <small>R.APP</small> GUI.
+</p>
+<hr>
+<a name="Internationalization-of-the-R_002eapp"></a>
+<div class="header">
+<p>
+Next: <a href="#Additional-resources" accesskey="n" rel="next">Additional resources</a>, Previous: <a href="#Tcl_002fTk-issues" accesskey="p" rel="prev">Tcl/Tk issues</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+<a name="Internationalization-of-the-R_002eapp-1"></a>
+<h2 class="chapter">7 Internationalization of the R.app</h2>
+<p><acronym>R</acronym> and the <small>R.APP</small> GUI introduced support for internationalization in
+R 2.1.0. Among other things this means that both messages and GUI
+elements can be translated into various languages. <small>R.APP</small> automatically
+detects user&rsquo;s settings in the <em>International</em> section of the
+System Preferences and uses that information to offer translated
+messages and GUI if available. Please note that both <em>Language</em> and
+<em>Formats</em> information is used so they should be set up
+consistently.
+</p>
+<p>If you use a non-standard setup (e.g. different language than
+formats), you can override the auto-detection performed by setting
+&lsquo;<samp>force.LANG</samp>&rsquo; defaults setting, such as for example
+</p><div class="example">
+<pre class="example">defaults write org.R-project.R force.LANG en_US.UTF-8
+</pre></div>
+<p>when run in <em>Terminal</em> it will enforce US-english setting
+regardless of the system setting. If you don&rsquo;t know what <em>Terminal</em>
+is you can use this <acronym>R</acronym> command instead:
+</p><div class="example">
+<pre class="example">system(&quot;defaults write org.R-project.R force.LANG en_US.UTF-8&quot;)
+</pre></div>
+<p>but do not forget to quit <acronym>R</acronym> and start <small>R.APP</small> again
+afterwards. Please note that you must always use &lsquo;<samp>.UTF-8</samp>&rsquo; version
+of the locale, otherwise <small>R.APP</small> will not work properly.
+</p>
+<p>By default <small>R.APP</small> uses UTF-8 for newly created documents and for the
+console. When opening new documents <small>R.APP</small> assumes UTF-8 and only if
+the document violates UTF-8 rules, it will try to fallback to legacy
+encoding, usually Mac Roman.
+</p>
+<p>If you are interested in translating <small>R.APP</small> GUI into other languages,
+please read the developer documentation at
+<a href="http://developer.r-project.org/Translations30.html">http://developer.r-project.org/Translations30.html</a>.
+</p>
+<hr>
+<a name="Additional-resources"></a>
+<div class="header">
+<p>
+Next: <a href="#Acknowledgments" accesskey="n" rel="next">Acknowledgments</a>, Previous: <a href="#Internationalization-of-the-R_002eapp" accesskey="p" rel="prev">Internationalization of the R.app</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+<a name="Additional-resources-1"></a>
+<h2 class="chapter">8 Additional resources</h2>
+<p>Here are few references that can be of interest for Mac OS X and/or developers.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Apple-Developer-Connection" accesskey="1">Apple Developer Connection</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#The-R-for-Mac-OS-X-Developer-page" accesskey="2">The R for Mac OS X Developer page</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<a name="Apple-Developer-Connection"></a>
+<div class="header">
+<p>
+Next: <a href="#The-R-for-Mac-OS-X-Developer-page" accesskey="n" rel="next">The R for Mac OS X Developer page</a>, Previous: <a href="#Additional-resources" accesskey="p" rel="prev">Additional resources</a>, Up: <a href="#Additional-resources" accesskey="u" rel="up">Additional resources</a> &nbsp; </p>
+</div>
+<a name="Apple-Developer-Connection-1"></a>
+<h3 class="section">8.1 Apple Developer Connection</h3>
+
+<p>The Apple Developer Connection (can be reached at
+<a href="http://developer.apple.com">http://developer.apple.com</a>) is the main source of information for
+Apple products (OS, hardware, software) for developers. You can
+subscribe for free to ADC and get the latest up-to-date tools from Apple
+(compilers for example): however more recently these have been
+distributed through the App Store.
+</p>
+<hr>
+<a name="The-R-for-Mac-OS-X-Developer-page"></a>
+<div class="header">
+<p>
+Previous: <a href="#Apple-Developer-Connection" accesskey="p" rel="prev">Apple Developer Connection</a>, Up: <a href="#Additional-resources" accesskey="u" rel="up">Additional resources</a> &nbsp; </p>
+</div>
+<a name="The-R-for-Mac-OS-X-Developer-page-1"></a>
+<h3 class="section">8.2 The R for Mac OS X Developer page</h3>
+<p>There is a page dedicated to development versions for R for Mac OS X. This page is located at
+<a href="http://R.research.att.com/">http://R.research.att.com/</a> and is maintained by Simon Urbanek.
+It contains latest nightly builds of <acronym>R</acronym> and <small>R.APP</small> as well as information on tools necessary to build R.
+</p>
+<hr>
+<a name="Acknowledgments"></a>
+<div class="header">
+<p>
+Next: <a href="#Miscellaneous-questions" accesskey="n" rel="next">Miscellaneous questions</a>, Previous: <a href="#Additional-resources" accesskey="p" rel="prev">Additional resources</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+<a name="Acknowledgments-1"></a>
+<h2 class="chapter">9 Acknowledgments</h2>
+
+<p>Special thanks go to Jan de Leeuw, Byron Ellis and Thomas Lumley in
+random order. Last but not least Apple for amazing OS and GUI.
+</p>
+<hr>
+<a name="Miscellaneous-questions"></a>
+<div class="header">
+<p>
+Previous: <a href="#Acknowledgments" accesskey="p" rel="prev">Acknowledgments</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+<a name="Miscellaneous-questions-1"></a>
+<h2 class="chapter">10 Miscellaneous questions</h2>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#How-can-I-have-a-per-session-_002eRprofile_003f" accesskey="1">How can I have a per session .Rprofile?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-happens-if-I-drag-a-file-on-the-R-icon_003f" accesskey="2">What happens if I drag a file on the R icon?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-can-I-interrupt-lengthy-operations-or-output_003f" accesskey="3">How can I interrupt lengthy operations or output?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-see-spurious-error-messages-when-starting-R_0021" accesskey="4">I see spurious error messages when starting R!</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Which-BLAS-is-used-and-how-can-it-be-changed_003f" accesskey="5">Which BLAS is used and how can it be changed?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-don_0027t-see-a-thing-when-installing-packages_0021" accesskey="6">I don't see a thing when installing packages!</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Why-are-there-faint-lines-in-image-plots_003f" accesskey="7">Why are there faint lines in image plots?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Why-doesn_0027t-R-GUI-support-keyboard-shortcut-XYZ-_003f" accesskey="8">Why doesn't R GUI support keyboard shortcut XYZ ?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-is-the-difference-between-the-CRAN-build-and-a-vanilla-build_003f" accesskey="9">What is the difference between the CRAN build and a vanilla build?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Why-is-R_002ehome_0028_0029-not-versioned_003f">Why is R.home() not versioned?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#R_002eapp-GUI-crashes-on-startup_0021">R.app GUI crashes on startup!</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Why-is-the-GUI-not-saving-my-history_003f">Why is the GUI not saving my history?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-_0060_0060command-not-found_0027_0027-in-the-GUI-yet-it-works-in-the-Terminal-_002d_002d-why_003f">I get ``command not found'' in the GUI yet it works in the Terminal -- why?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-see-no-text-in-a-Quartz-plot_0021">I see no text in a Quartz plot!</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-_0060_0060clang_003a-error_003a-unsupported-option-_002dfopenmp_0027_0027-when-compiling-a-package-_002d_002d-why_003f">I get ``clang: error: unsupported option -fopenmp'' when compiling a package -- why?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<a name="How-can-I-have-a-per-session-_002eRprofile_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#What-happens-if-I-drag-a-file-on-the-R-icon_003f" accesskey="n" rel="next">What happens if I drag a file on the R icon?</a>, Previous: <a href="#Miscellaneous-questions" accesskey="p" rel="prev">Miscellaneous questions</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="How-can-I-have-a-per-session-_002eRprofile_003f-1"></a>
+<h3 class="section">10.1 How can I have a per session .Rprofile?</h3>
+<p>You can by writing a <samp>.Rprofile</samp> file in your favorite
+session directory and change accordingly the startup working directory using the Preferences (see <a href="#The-current-and-startup-working-directories">The current and startup working directories</a>).
+</p>
+<hr>
+<a name="What-happens-if-I-drag-a-file-on-the-R-icon_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-can-I-interrupt-lengthy-operations-or-output_003f" accesskey="n" rel="next">How can I interrupt lengthy operations or output?</a>, Previous: <a href="#How-can-I-have-a-per-session-_002eRprofile_003f" accesskey="p" rel="prev">How can I have a per session .Rprofile?</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="What-happens-if-I-drag-a-file-on-the-R-icon_003f-1"></a>
+<h3 class="section">10.2 What happens if I drag a file on the R icon?</h3>
+<p>In this case <acronym>R</acronym> will try to source this file or load the image data file (see <a href="#Finder-actions">Finder actions</a>). If <acronym>R</acronym> is not
+yet running it will be launched.
+</p>
+<hr>
+<a name="How-can-I-interrupt-lengthy-operations-or-output_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#I-see-spurious-error-messages-when-starting-R_0021" accesskey="n" rel="next">I see spurious error messages when starting R!</a>, Previous: <a href="#What-happens-if-I-drag-a-file-on-the-R-icon_003f" accesskey="p" rel="prev">What happens if I drag a file on the R icon?</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="How-can-I-interrupt-lengthy-operations-or-output_003f-1"></a>
+<h3 class="section">10.3 How can I interrupt lengthy operations or output?</h3>
+<p>In <small>R.APP</small> you can use the the <em>Stop</em> toolbar button or the <tt class="key">ESC</tt> (escape) key in the console window to interrupt a running calculation or output.
+</p>
+<p>For the command line version the same is achieved by pressing <kbd><span class="key">Ctrl</span>-c</kbd>. Both applications honor the <code>INT</code> signal, i.e. you can type the following in a separate Terminal window to cancel all R computations:
+</p><div class="example">
+<pre class="example">killall -INT R
+</pre></div>
+
+<p>However, if the executed code does not check for interrupts (using &lsquo;<samp>R_CheckUserInterrupt</samp>&rsquo;) there may be no way of stopping <acronym>R</acronym>. In that case it may be worth alerting the maintainer of the package to allow interruption (if appropriate).
+</p>
+<hr>
+<a name="I-see-spurious-error-messages-when-starting-R_0021"></a>
+<div class="header">
+<p>
+Next: <a href="#Which-BLAS-is-used-and-how-can-it-be-changed_003f" accesskey="n" rel="next">Which BLAS is used and how can it be changed?</a>, Previous: <a href="#How-can-I-interrupt-lengthy-operations-or-output_003f" accesskey="p" rel="prev">How can I interrupt lengthy operations or output?</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="I-see-spurious-error-messages-when-starting-R_0021-1"></a>
+<h3 class="section">10.4 I see spurious error messages when starting R!</h3>
+
+<p>If you see error messages upon start of the R GUI which contain
+<code>Library/InputManagers</code> anywhere in the text, then you have some
+broken haxxies installed in your system. Those messages do NOT come from
+<acronym>R</acronym>, so don&rsquo;t blame us. Bundles located in <code>Library/InputManagers</code>
+of your home (or system) are hacks that get loaded into every Mac
+application that you start. In most cases you don&rsquo;t see them crashing,
+because most applications don&rsquo;t show the console output, but <acronym>R</acronym> does,
+so all the errors those hacks are causing become visible. The easiest
+remedy is to delete all offending bundles (possibly the whole
+<code>Library/InputManagers</code> folder) and get a fixed version of the hack
+(if you need it). The most common cause for broken hacks is system
+updgrade (e.g. you get a new Mac and you transfer you settings which
+include those hacks that are incompatible with your new Mac).
+</p>
+<p>If you want to disable all external error output in the GUI, use
+</p><div class="example">
+<pre class="example">defaults write org.R-project.R 'Ignore stderr' YES
+</pre></div>
+<p>in the Terminal. Note, however, that this will disable <em>all</em> error output from external programs including package installation or the <code>system</code> command.
+</p>
+<hr>
+<a name="Which-BLAS-is-used-and-how-can-it-be-changed_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#I-don_0027t-see-a-thing-when-installing-packages_0021" accesskey="n" rel="next">I don't see a thing when installing packages!</a>, Previous: <a href="#I-see-spurious-error-messages-when-starting-R_0021" accesskey="p" rel="prev">I see spurious error messages when starting R!</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="Which-BLAS-is-used-and-how-can-it-be-changed_003f-1"></a>
+<h3 class="section">10.5 Which BLAS is used and how can it be changed?</h3>
+
+<p>The BLAS library used by <acronym>R</acronym> depends on the way <acronym>R</acronym> was compiled (see
+&lsquo;R Installation and Administration&rsquo; manual for details). Current <acronym>R</acronym>
+binaries supplied from <acronym>CRAN</acronym> provide both vecLib-based BLAS and
+reference BLAS shipped with <acronym>R</acronym>. vecLib is a part of Apple&rsquo;s Accelerate
+framework which provides an optimized BLAS implementation for Mac
+hardware. Although fast, it is not under our control and may possibly
+deliver inaccurate results.
+</p>
+<p>The <acronym>CRAN</acronym> binary uses <code>--enable-BLAS-shlib</code> option and two Rblas
+shared libraries are supplied: <samp>libRblas.vecLib.dylib</samp> which uses
+vecLib BLAS and <samp>libRblas.0.dylib</samp> which uses reference BLAS from
+<acronym>R</acronym>. A symbolic link <samp>libRblas.dylib</samp> determines which one is
+used. Currently the default is to use the <acronym>R</acronym> BLAS: this is recommended
+for precision.
+</p>
+<p>In order to change which BLAS is used, change the <samp>libRblas.dylib</samp>
+symlink correspondingly &ndash; for example in Terminal:
+</p><div class="example">
+<pre class="example">cd /Library/Frameworks/R.framework/Resources/lib
+
+# for vecLib use
+ln -sf libRblas.vecLib.dylib libRblas.dylib
+
+# for R reference BLAS use
+ln -sf libRblas.0.dylib libRblas.dylib
+</pre></div>
+
+<p>This feature is only present in the <acronym>R</acronym> <acronym>CRAN</acronym> binary. Ordinarily
+compiled <acronym>R</acronym> from sources will only have one of the above BLAS
+libraries, corresponding to the configuration options used.
+</p>
+<hr>
+<a name="I-don_0027t-see-a-thing-when-installing-packages_0021"></a>
+<div class="header">
+<p>
+Next: <a href="#Why-are-there-faint-lines-in-image-plots_003f" accesskey="n" rel="next">Why are there faint lines in image plots?</a>, Previous: <a href="#Which-BLAS-is-used-and-how-can-it-be-changed_003f" accesskey="p" rel="prev">Which BLAS is used and how can it be changed?</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="I-don_0027t-see-a-thing-when-installing-packages_0021-1"></a>
+<h3 class="section">10.6 I don&rsquo;t see a thing when installing packages!</h3>
+<p>The output is not produced continuously during the package
+installation. <small>R.APP</small> does its best to display the output as soon as
+possible, but for example the documentation script does not print
+anything until done.
+</p>
+<p>Also note that the development build of <small>R.APP</small> sends output to the
+error console instead of the screen. You may want to check the
+<em>Console</em> application in that case.
+</p>
+
+<hr>
+<a name="Why-are-there-faint-lines-in-image-plots_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#Why-doesn_0027t-R-GUI-support-keyboard-shortcut-XYZ-_003f" accesskey="n" rel="next">Why doesn't R GUI support keyboard shortcut XYZ ?</a>, Previous: <a href="#I-don_0027t-see-a-thing-when-installing-packages_0021" accesskey="p" rel="prev">I don't see a thing when installing packages!</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="Why-are-there-faint-lines-in-image-plots_003f-1"></a>
+<h3 class="section">10.7 Why are there faint lines in image plots?</h3>
+
+<p>When plots based on the <code>image()</code> function are exported to PDF,
+Preview shows very faint grid lines at the edges of the rectangles that
+create the image. Those lines are a rendering artifact in Preview coming
+from the combination of anti-aliasing and sub-pixel rendering. They are
+not really a part of the PDF (zooming in will reveal that they are not a
+real object which would get larger with zoom) since the rectangles are
+defined as a gapless coverage of the area. The effect can be
+circumvented by disabling anti-aliasing in Preview.
+</p>
+<p>We correct for this effect in Quartz when rendering on-screen by
+snapping all rectangles to pixel boundaries of the screen, but Preview
+does not.
+</p>
+<p>The same effect occurs in any plot with adjacent, filled polygons
+without border.
+</p>
+<hr>
+<a name="Why-doesn_0027t-R-GUI-support-keyboard-shortcut-XYZ-_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#What-is-the-difference-between-the-CRAN-build-and-a-vanilla-build_003f" accesskey="n" rel="next">What is the difference between the CRAN build and a vanilla build?</a>, Previous: <a href="#Why-are-there-faint-lines-in-image-plots_003f" accesskey="p" rel="prev">Why are there faint lines in image plots?</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="Why-doesn_0027t-R-GUI-support-keyboard-shortcut-XYZ-_003f-1"></a>
+<h3 class="section">10.8 Why doesn&rsquo;t R GUI support keyboard shortcut XYZ ?</h3>
+
+<p>The <small>R.APP</small> GUI uses Apple frameworks for text editing and thus the
+behavior of text views (console, editor, etc.) is consistent with other
+applications and allows a very flexible customization. For example if
+you are not satisfied with the default Emacs-like key bindings that Mac
+OS X provides, Apple allows you to extend them arbitrarily. For more
+details see Apple&rsquo;s documentation on
+<a href="http://developer.apple.com/documentation/Cocoa/Conceptual/EventOverview/TextDefaultsBindings/chapter_9_section_2.html">Key Bindings</a>. There are also many 3rd-party pages on key bindings
+customization, search for <code>StandardKeyBinding.dict</code>.
+</p>
+<hr>
+<a name="What-is-the-difference-between-the-CRAN-build-and-a-vanilla-build_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#Why-is-R_002ehome_0028_0029-not-versioned_003f" accesskey="n" rel="next">Why is R.home() not versioned?</a>, Previous: <a href="#Why-doesn_0027t-R-GUI-support-keyboard-shortcut-XYZ-_003f" accesskey="p" rel="prev">Why doesn't R GUI support keyboard shortcut XYZ ?</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="What-is-the-difference-between-the-CRAN-build-and-a-vanilla-build_003f-1"></a>
+<h3 class="section">10.9 What is the difference between the CRAN build and a vanilla build?</h3>
+
+<p>The <acronym>CRAN</acronym> build of R is slightly different from a vanilla build of R,
+i.e., a simple <code>./configure &amp;&amp; make &amp;&amp; make install</code>. The default
+package type for all builds compiled from sources is <code>&quot;source&quot;</code>
+wheres <acronym>CRAN</acronym> uses binary packages.  Only the <acronym>CRAN</acronym> build is
+guaranteed to be compatible with the package binaries on <acronym>CRAN</acronym> (or
+Bioconductor).
+</p>
+<hr>
+<a name="Why-is-R_002ehome_0028_0029-not-versioned_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#R_002eapp-GUI-crashes-on-startup_0021" accesskey="n" rel="next">R.app GUI crashes on startup!</a>, Previous: <a href="#What-is-the-difference-between-the-CRAN-build-and-a-vanilla-build_003f" accesskey="p" rel="prev">What is the difference between the CRAN build and a vanilla build?</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="Why-is-R_002ehome_0028_0029-in-the-R-framework-not-versioned_003f"></a>
+<h3 class="section">10.10 Why is R.home() in the R framework not versioned?</h3>
+
+<p>In the command line version of R, <code>R.home()</code> always points to the
+<code>Resources</code> directory symbolic link inside the R framework which
+points to <code>Versions/Current/Resource</code> which is turn points to the
+actual home &ndash; a versioned directory such as for example
+<code>Versions/3.0/Resources</code>. This is how framework versioning works
+in Mac OS X and is defined by Apple (see
+<a href="http://developer.apple.com/documentation/MacOSX/Conceptual/BPFrameworks/Concepts/FrameworkAnatomy.html">Framework Anatomy</a>).
+</p>
+<p>The advantage of this setup is that it is possible to install multiple R
+versions in parallel and they all will be fully functional as long as
+the <code>Current</code> symbolic link points to the currently used
+version. There is even a small GUI utility <code>RSwitch</code> available from
+the <a href="http://r.research.att.com/">R for Mac devel page</a> that allows
+you to select the desired version. In addition, any application
+embedding R can choose to use a specific R version (in most cases) or
+any version.  Note that <small>R.APP</small> is compiled against a particular version
+of <acronym>R</acronym> and it may crash if <code>RSwitch</code> is used to change the version
+of <acronym>R</acronym> in use.
+</p>
+<p>Although it is possible to set <code>R_HOME</code> directly to the versioned
+path in the R shell scripts (and thus be able to run different version
+in parallel without changing the symbolic link), there are several
+dangers lurking there so we don&rsquo;t recommend it. One problem is that
+building packages from source won&rsquo;t work. The linker is always linking
+against the current version of the framework and therefore only the
+currently active version of R can compile packages. Further, packages
+may have used the value of <code>R.home()</code> at install time and thus may
+not work with incorrect setting.  Finally, if such an R start script
+happens to get copied and the R version changes, it will stop working.
+</p>
+<hr>
+<a name="R_002eapp-GUI-crashes-on-startup_0021"></a>
+<div class="header">
+<p>
+Next: <a href="#Why-is-the-GUI-not-saving-my-history_003f" accesskey="n" rel="next">Why is the GUI not saving my history?</a>, Previous: <a href="#Why-is-R_002ehome_0028_0029-not-versioned_003f" accesskey="p" rel="prev">Why is R.home() not versioned?</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="R_002eapp-GUI-crashes-on-startup_0021-1"></a>
+<h3 class="section">10.11 R.app GUI crashes on startup!</h3>
+
+<p>If your <small>R.APP</small> GUI crashes on startup, there are two common causes for
+this: a saved workspace or a corrupted history file.  (Another is a
+mismatch between <small>R.APP</small> and <acronym>R</acronym> if either has been updated or
+<code>RSwitch</code> has been used.)
+</p>
+<p>Saved workspaces can contain commands that implicitly load packages
+which in turn can trigger bugs in packages or feed R with incorrect
+starting values (especially if it was saved using another R). Try
+removing or renaming your workspace &ndash; it&rsquo;s called <code>.RData</code>. If you
+did not change your startup settings, you can e.g. use
+</p>
+<div class="example">
+<pre class="example">mv ~/.RData ~/workspace.RData
+</pre></div>
+
+<p>to move it aside and load later manually for inspection using <code>load(&quot;~/workspace.RData&quot;)</code>.
+</p>
+<p>Second most common cause of crashes on startup is a history file that
+was not created using the <small>R.APP</small> GUI. Again, move it aside to see if
+that&rsquo;s the issue: for the default file this could be done by
+</p>
+<div class="example">
+<pre class="example">mv ~/.Rapp.history ~/history.txt
+</pre></div>
+
+<p>Although we are trying to recover from invalid history files, they can
+still crash <small>R.APP</small> due to issues in the internal handling of strings in
+Mac OS X. We are currently working on preventing this issue.
+</p>
+<p>If you did both of the above and <small>R.APP</small> still crashes, please select
+&lsquo;1&rsquo; in the menu after the crash (if you get the crash menu in the
+console) and send us the resulting crash report (see see <a href="#R_002eapp-Bugs">R.app Bugs</a>
+above).
+</p>
+<hr>
+<a name="Why-is-the-GUI-not-saving-my-history_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#I-get-_0060_0060command-not-found_0027_0027-in-the-GUI-yet-it-works-in-the-Terminal-_002d_002d-why_003f" accesskey="n" rel="next">I get ``command not found'' in the GUI yet it works in the Terminal -- why?</a>, Previous: <a href="#R_002eapp-GUI-crashes-on-startup_0021" accesskey="p" rel="prev">R.app GUI crashes on startup!</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="Why-is-the-GUI-not-saving-my-history_003f-1"></a>
+<h3 class="section">10.12 Why is the GUI not saving my history?</h3>
+
+<p><small>R.APP</small> will by default save the history in a <code>.Rapp.history</code> file
+whereas command line <acronym>R</acronym> will use <code>.Rhistory</code>.  So the saved
+history is only used in subsequent <small>R.APP</small> sessions and not command-line
+<acronym>R</acronym>, and conversely.
+</p>
+<p>Note that calling <code>savehistory()</code> in <small>R.APP</small> does not currently
+save the history of the <small>R.APP</small> session: this means that
+<code>history()</code> will show an empty window.
+</p>
+<hr>
+<a name="I-get-_0060_0060command-not-found_0027_0027-in-the-GUI-yet-it-works-in-the-Terminal-_002d_002d-why_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#I-see-no-text-in-a-Quartz-plot_0021" accesskey="n" rel="next">I see no text in a Quartz plot!</a>, Previous: <a href="#Why-is-the-GUI-not-saving-my-history_003f" accesskey="p" rel="prev">Why is the GUI not saving my history?</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="I-get-_0060_0060command-not-found_0027_0027-in-the-GUI-yet-it-works-in-the-Terminal-_002d_002d-why_003f-1"></a>
+<h3 class="section">10.13 I get &ldquo;command not found&rdquo; in the GUI yet it works in the Terminal &ndash; why?</h3>
+
+<p>When executing system commands (for example directly via <code>system</code> or indirectly via functions that call other programs such as <code>install.packages</code>) the locations in which the shell is looking for programs is governed by the <code>PATH</code> environment variable. That variable may be set differently for R started from an interactive shell and for R started in the GUI. You can use <code>Sys.getenv(&quot;PATH&quot;)</code> to verify the current setting.
+</p>
+<p>When R is started from a shell (e.g., on the command line of the Terminal), it will inherit settings from that shell. Those are typically modified by shell-specific configuration files, such as <code>.profile</code> or <code>.bashrc</code>. Those apply only to the shell, not to the system as a whole. In addition, some installers (such as MacTeX) will modify global shell settings to make user&rsquo;s life more comfortable on the command line, but, again, those do not apply to programs not started from the shell &ndash; such as GUIs. See <a href="http://developer.apple.com/library/mac/#qa/qa1067">Apple Technical Q&amp;A QA1067</a> for what Apple says about the topic.
+</p>
+<p>In order to standardize your <code>PATH</code> setting in R, you can set it in
+your <code>.Renviron</code> file (in your home directory &ndash; see <code>?Startup</code>
+in R for details on how R uses configuration files on startup). This
+setting will apply to R regardless of how it is started. You can also
+add more elaborate constructs to <code>.Rprofile</code> instead if you wish to
+selectively modify the existing <code>PATH</code> variable via
+<code>Sys.getenv</code> and <code>Sys.setenv</code>.
+</p>
+<hr>
+<a name="I-see-no-text-in-a-Quartz-plot_0021"></a>
+<div class="header">
+<p>
+Next: <a href="#I-get-_0060_0060clang_003a-error_003a-unsupported-option-_002dfopenmp_0027_0027-when-compiling-a-package-_002d_002d-why_003f" accesskey="n" rel="next">I get ``clang: error: unsupported option -fopenmp'' when compiling a package -- why?</a>, Previous: <a href="#I-get-_0060_0060command-not-found_0027_0027-in-the-GUI-yet-it-works-in-the-Terminal-_002d_002d-why_003f" accesskey="p" rel="prev">I get ``command not found'' in the GUI yet it works in the Terminal -- why?</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="I-see-no-text-in-a-Quartz-plot_0021-1"></a>
+<h3 class="section">10.14 I see no text in a Quartz plot!</h3>
+
+<p>Typically this means that you have corrupted fonts in your system. Open
+the <code>Font Book</code> application (in <code>Applications</code>) and check the
+fonts that you are using (for example the default font in Quartz is
+currently &ldquo;Arial&rdquo;).  Corrupted fonts will have no glyphs (text will not
+appear as it should), remove such fonts.
+</p>
+<hr>
+<a name="I-get-_0060_0060clang_003a-error_003a-unsupported-option-_002dfopenmp_0027_0027-when-compiling-a-package-_002d_002d-why_003f"></a>
+<div class="header">
+<p>
+Previous: <a href="#I-see-no-text-in-a-Quartz-plot_0021" accesskey="p" rel="prev">I see no text in a Quartz plot!</a>, Up: <a href="#Miscellaneous-questions" accesskey="u" rel="up">Miscellaneous questions</a> &nbsp; </p>
+</div>
+<a name="I-get-_0060_0060clang_003a-error_003a-unsupported-option-_002dfopenmp_0027_0027-when-compiling-a-package-_002d_002d-why_003f-1"></a>
+<h3 class="section">10.15 I get &ldquo;clang: error: unsupported option -fopenmp&rdquo; when compiling a package &ndash; why?</h3>
+
+<p>CRAN binaries for the El Capitan build (the main build since R 3.4.0) come with OpenMP support (it is a way to parallelize many operations and thus make R faster), which is only available in recent Clang compilers. In order to compile packages you must install a Clang compiler with OpenMP support, we provide one in the tools section on CRAN: <a href="https://cran.r-project.org/bin/macosx/tools/">https://cran.r-project.org/bin/macosx/tools/</a>. Apple&rsquo;s Clang that comes with Xcode does not support OpenMP and thus cannot be used. For details please see the instructions on the aforementioned CRAN tools page &ndash; for example, if you use our clang binary then you can set <code>PATH=/usr/local/clang6/bin:$PATH</code> or set the full paths to the tools in <code>~/.R/Makevars</code>. If you see the error <code>clang: error: unsupported option '-fopenmp'</code> then you are not using the correct clang compiler.
+</p>
+<hr>
+
+
+
+</body>
+</html>

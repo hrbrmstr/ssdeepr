@@ -1,6 +1,6 @@
 Package: ssdeepr
 Type: Package
-Title: ssdeepr title goes here otherwise CRAN checks fail
+Title: Context Triggered Piecewise Hash Computation Using 'ssdeep'
 Version: 0.1.0
 Date: 2020-03-02
 Authors@R: c(
@@ -8,9 +8,12 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-5670-2640"))
   )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A good description goes here otherwise CRAN checks fail.
+Description: The ssdeep project provides an open source library <https://github.com/ssdeep-project/ssdeep/> 
+   context triggered piecewise hashing. Methods are provided to compute and compare
+   hashes from character/byte streams.
 URL: https://git.rud.is/hrbrmstr/ssdeepr
 BugReports: https://git.rud.is/hrbrmstr/ssdeepr/issues
+SystemRequirements: C++11; libfuzzy <https://ssdeep-project.github.io/ssdeep/index.html#platforms>
 Encoding: UTF-8
 License: AGPL
 Suggests: 
@@ -18,7 +21,9 @@ Suggests:
 Depends: 
     R (>= 3.2.0)
 Imports: 
-    httr,
-    jsonlite
+    Rcpp,
+    magrittr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.0.2
+LinkingTo: 
+    Rcpp

@@ -25,6 +25,24 @@ hrbrpkghelpr::describe_ingredients()
 
 ## Installation
 
+You'll need `libfuzzy` installed and available for linking. See <https://ssdeep-project.github.io/ssdeep/index.html#platforms> for platform support.
+
+On Ubuntu/Debian you can do:
+
+```shell
+sudo apt install libfuzzy-dev
+```
+
+On macOS you can do:
+
+```shell
+brew install ssdeep
+```
+
+The library works on Windows, I just need to do some manual labor for that.
+
+Package installation:
+
 ```{r install-ex, results='asis', echo=FALSE, cache=FALSE}
 hrbrpkghelpr::install_block()
 ```
@@ -37,6 +55,24 @@ library(ssdeepr)
 # current version
 packageVersion("ssdeepr")
 
+```
+
+- `index.html` is a static copy of a blog main page with a bunch of `<div>`s with article snippets
+- `index1.html` is the same file as `index.htmnl` with a changed cache timestamp at the end
+- `index2.html` is the same file as `index.html` with one article snippet removed
+- `RMacOSX-FAQ.html` is the CRAN 'R for Mac OS X FAQ'
+
+```{r u-01}
+system.file("extdat", package="ssdeepr") %>% 
+  list.files(full.names = TRUE, pattern = "html$", include.dirs = FALSE) %>% 
+  hash_file() -> hashes
+
+hashes
+
+hash_compare(hashes$hash[1], hashes$hash[1])
+hash_compare(hashes$hash[1], hashes$hash[2])
+hash_compare(hashes$hash[1], hashes$hash[3])
+hash_compare(hashes$hash[1], hashes$hash[4])
 ```
 
 ## ssdeepr Metrics

@@ -4,9 +4,11 @@
 \name{ssdeepr}
 \alias{ssdeepr}
 \alias{ssdeepr-package}
-\title{...}
+\title{Context Triggered Piecewise Hash Computation Using 'ssdeep'}
 \description{
-A good description goes here otherwise CRAN checks fail.
+The ssdeep project provides an open source library \url{https://github.com/ssdeep-project/ssdeep/}
+context triggered piecewise hashing. Methods are provided to compute and compare
+hashes from character/byte streams.
 }
 \seealso{
 Useful links:
