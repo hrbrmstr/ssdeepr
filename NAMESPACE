@@ -2,6 +2,7 @@
 
 export("%>%")
 export(hash_compare)
+export(hash_con)
 export(hash_file)
 export(hash_raw)
 importFrom(Rcpp,sourceCpp)

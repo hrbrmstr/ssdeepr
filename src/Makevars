@@ -1,3 +1,7 @@
-CXX_STD = CXX11
-PKG_CXXFLAGS =
-PKG_LIBS = -lfuzzy
+PKG_CPPFLAGS=-I/usr/local/opt/ssdeep/include
+PKG_LIBS=-L/usr/local/opt/ssdeep/lib -L/usr/local/opt/ssdeep/lib -lfuzzy
+
+all: clean
+
+clean:
+	rm -Rf $(SHLIB) $(OBJECTS)

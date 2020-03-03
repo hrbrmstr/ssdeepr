@@ -75,6 +75,24 @@ hash_compare(hashes$hash[1], hashes$hash[3])
 hash_compare(hashes$hash[1], hashes$hash[4])
 ```
 
+Works with Connections, too. All three should be the same if the Wikipedia page hasn't changed since making local copies in the package.
+
+NOTE that retrieving the URL contents with different user-agent strings and/or with javascript-enabled may/will likely generate different content and, thus, a different hash.
+
+```{r u-02}
+(k1 <- hash_con(url("https://en.wikipedia.org/wiki/Donald_Knuth")))
+
+(k2 <- hash_con(file(system.file("knuth", "local.html", package = "ssdeepr"))))
+
+(k3 <- hash_con(gzfile(system.file("knuth", "local.gz", package = "ssdeepr"))))
+
+hash_compare(k1, k2)
+
+hash_compare(k1, k3)
+
+hash_compare(k2, k3)
+```
+
 ## ssdeepr Metrics
 
 ```{r cloc, echo=FALSE}

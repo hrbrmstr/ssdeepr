@@ -28,6 +28,7 @@ character/byte streams.
 The following functions are implemented:
 
   - `hash_compare`: Compare two hashes
+  - `hash_con`: Return CTP hash of one data collected from a connection
   - `hash_file`: Return CTP hash of one or more files
   - `hash_raw`: Return CTP hash of a raw vector
 
@@ -76,7 +77,7 @@ library(ssdeepr)
 
 # current version
 packageVersion("ssdeepr")
-## [1] '0.1.0'
+## [1] '0.2.0'
 ```
 
   - `index.html` is a static copy of a blog main page with a bunch of
@@ -116,13 +117,41 @@ hash_compare(hashes$hash[1], hashes$hash[4])
 ## [1] 0
 ```
 
+Works with Connections, too. All three should be the same if the
+Wikipedia page hasn’t changed since making local copies in the package.
+
+NOTE that retrieving the URL contents with different user-agent strings
+and/or with javascript-enabled may/will likely generate different
+content and, thus, a different hash.
+
+``` r
+(k1 <- hash_con(url("https://en.wikipedia.org/wiki/Donald_Knuth")))
+## [1] "3072:u2dfqECHC6NPsWzqFg2qDKgNYsVeJb19pEDTlfrd5czRsZNqqelzPFKsuXs6X9pU:PQli6NPsWzcg2/EYsVUY6sI"
+
+(k2 <- hash_con(file(system.file("knuth", "local.html", package = "ssdeepr"))))
+## [1] "3072:u2dfqECHC6NPsWzqFg2qDKgNYsVeJb19pEDTlfrd5czRsZNqqelzPFKsuXs6X9pU:PQli6NPsWzcg2/EYsVUY6sI"
+
+(k3 <- hash_con(gzfile(system.file("knuth", "local.gz", package = "ssdeepr"))))
+## [1] "3072:u2dfqECHC6NPsWzqFg2qDKgNYsVeJb19pEDTlfrd5czRsZNqqelzPFKsuXs6X9pU:PQli6NPsWzcg2/EYsVUY6sI"
+
+hash_compare(k1, k2)
+## [1] 100
+
+hash_compare(k1, k3)
+## [1] 100
+
+hash_compare(k2, k3)
+## [1] 100
+```
+
 ## ssdeepr Metrics
 
-| Lang | \# Files | (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
-| :--- | -------: | --: | --: | ---: | ----------: | ---: | -------: | ---: |
-| C++  |        2 | 0.2 |  67 | 0.52 |          21 | 0.30 |        8 | 0.07 |
-| R    |        7 | 0.7 |  45 | 0.35 |          22 | 0.32 |       61 | 0.54 |
-| Rmd  |        1 | 0.1 |  16 | 0.12 |          26 | 0.38 |       45 | 0.39 |
+| Lang         | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
+| :----------- | -------: | ---: | --: | ---: | ----------: | ---: | -------: | ---: |
+| C++          |        2 | 0.15 |  67 | 0.33 |          21 | 0.23 |        8 | 0.06 |
+| R            |        8 | 0.62 |  62 | 0.30 |          28 | 0.30 |       71 | 0.50 |
+| Bourne Shell |        2 | 0.15 |  54 | 0.26 |           9 | 0.10 |       14 | 0.10 |
+| Rmd          |        1 | 0.08 |  22 | 0.11 |          34 | 0.37 |       49 | 0.35 |
 
 ## Code of Conduct
 
