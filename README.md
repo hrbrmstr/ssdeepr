@@ -56,6 +56,8 @@ that.
 Package installation:
 
 ``` r
+install.packages("ssdeepr", repos = "https://cinc.rud.is")
+# or
 remotes::install_git("https://git.rud.is/hrbrmstr/ssdeepr.git")
 # or
 remotes::install_git("https://git.sr.ht/~hrbrmstr/ssdeepr")
