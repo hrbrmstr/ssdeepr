@@ -4,17 +4,23 @@
 \alias{hash_con}
 \title{Return CTP hash of one data collected from a connection}
 \usage{
-hash_con(con)
+hash_con(con, buffer_size = 32768L)
 }
 \arguments{
 \item{con}{a \link{connection}}
+
+\item{buffer_size}{\code{(int)} how big of a read buffer to use? This is the "chunk size" for each call to \code{\link[=readBin]{readBin()}}.}
 }
 \value{
 data frame
 }
 \description{
-Return CTP hash of one data collected from a connection
+This function has an advantage over the other ones as it does not require the caller to read in
+the entire contents of a file or URL all at once, thus saving memory at a tiny hit to speed.
 }
 \examples{
+# All 3 shld be the same
 hash_con(url("https://en.wikipedia.org/wiki/Donald_Knuth"))
+hash_con(file(system.file("knuth", "local.html", package = "ssdeepr")))
+hash_con(gzfile(system.file("knuth", "local.gz", package = "ssdeepr")))
 }

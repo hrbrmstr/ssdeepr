@@ -27,10 +27,12 @@ character/byte streams.
 
 The following functions are implemented:
 
+  - `check_is_xptr`: Test whether an object is an external pointer
   - `hash_compare`: Compare two hashes
   - `hash_con`: Return CTP hash of one data collected from a connection
   - `hash_file`: Return CTP hash of one or more files
   - `hash_raw`: Return CTP hash of a raw vector
+  - `is_null_xptr_`: Test whether an external pointer is null
 
 ## Installation
 
@@ -122,13 +124,18 @@ hash_compare(hashes$hash[1], hashes$hash[4])
 Works with Connections, too. All three should be the same if the
 Wikipedia page hasn’t changed since making local copies in the package.
 
+Using `hash_con()` has the advantage of not requiring the entire
+contents of the target blob to be read into memory in exchange for a
+tiny cost to speed for most files (see Benchmarks).
+
 NOTE that retrieving the URL contents with different user-agent strings
 and/or with javascript-enabled may/will likely generate different
 content and, thus, a different hash.
 
 ``` r
-(k1 <- hash_con(url("https://en.wikipedia.org/wiki/Donald_Knuth")))
-## [1] "3072:u2dfqECHC6NPsWzqFg2qDKgNYsVeJb19pEDTlfrd5czRsZNqqelzPFKsuXs6X9pU:PQli6NPsWzcg2/EYsVUY6sI"
+(k1 <- hash_con(url("https://en.wikipedia.org/wiki/Donald_Knuth", 
+                    header = setNames(splashr::ua_ios_safari, "User-Agent"))))
+## [1] "1536:lWaFW+jsCHr6UVyn1KSLnGURhAa0qYHaYF8tUdkWO9F+mTi9f0ruvSWWqdX:fbL6EOKsGMYJF8t99EBxzWwX"
 
 (k2 <- hash_con(file(system.file("knuth", "local.html", package = "ssdeepr"))))
 ## [1] "3072:u2dfqECHC6NPsWzqFg2qDKgNYsVeJb19pEDTlfrd5czRsZNqqelzPFKsuXs6X9pU:PQli6NPsWzcg2/EYsVUY6sI"
@@ -137,23 +144,38 @@ content and, thus, a different hash.
 ## [1] "3072:u2dfqECHC6NPsWzqFg2qDKgNYsVeJb19pEDTlfrd5czRsZNqqelzPFKsuXs6X9pU:PQli6NPsWzcg2/EYsVUY6sI"
 
 hash_compare(k1, k2)
-## [1] 100
+## [1] 0
 
 hash_compare(k1, k3)
-## [1] 100
+## [1] 0
 
 hash_compare(k2, k3)
 ## [1] 100
+```
+
+Benchmarks
+
+``` r
+microbenchmark::microbenchmark(
+  con = hash_con(file(system.file("knuth", "local.html", package = "ssdeepr"))),
+  gzc = hash_con(gzfile(system.file("knuth", "local.gz", package = "ssdeepr"))),
+  fil = hash_file(system.file("knuth", "local.html", package = "ssdeepr"))
+)
+## Unit: milliseconds
+##  expr      min       lq     mean   median       uq       max neval cld
+##   con 6.495121 6.836061 7.395381 6.994470 7.288456 22.199177   100  b 
+##   gzc 7.453229 7.699096 8.062517 7.863777 8.074039 11.198605   100   c
+##   fil 5.576031 5.972613 6.182320 6.128887 6.382334  7.773328   100 a
 ```
 
 ## ssdeepr Metrics
 
 | Lang         | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 | :----------- | -------: | ---: | --: | ---: | ----------: | ---: | -------: | ---: |
-| C++          |        2 | 0.15 |  67 | 0.33 |          21 | 0.23 |        8 | 0.06 |
-| R            |        8 | 0.62 |  62 | 0.30 |          28 | 0.30 |       71 | 0.50 |
-| Bourne Shell |        2 | 0.15 |  54 | 0.26 |           9 | 0.10 |       14 | 0.10 |
-| Rmd          |        1 | 0.08 |  22 | 0.11 |          34 | 0.37 |       49 | 0.35 |
+| C++          |        2 | 0.15 | 168 | 0.51 |          45 | 0.36 |       26 | 0.15 |
+| R            |        8 | 0.62 |  78 | 0.24 |          34 | 0.27 |       83 | 0.47 |
+| Bourne Shell |        2 | 0.15 |  54 | 0.16 |           9 | 0.07 |       14 | 0.08 |
+| Rmd          |        1 | 0.08 |  28 | 0.09 |          37 | 0.30 |       53 | 0.30 |
 
 ## Code of Conduct
 

@@ -5,6 +5,60 @@
 
 using namespace Rcpp;
 
+// check_is_xptr
+void check_is_xptr(SEXP s);
+RcppExport SEXP _ssdeepr_check_is_xptr(SEXP sSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type s(sSEXP);
+    check_is_xptr(s);
+    return R_NilValue;
+END_RCPP
+}
+// is_null_xptr_
+SEXP is_null_xptr_(SEXP s);
+RcppExport SEXP _ssdeepr_is_null_xptr_(SEXP sSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type s(sSEXP);
+    rcpp_result_gen = Rcpp::wrap(is_null_xptr_(s));
+    return rcpp_result_gen;
+END_RCPP
+}
+// int_fuzzy_context
+SEXP int_fuzzy_context();
+RcppExport SEXP _ssdeepr_int_fuzzy_context() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(int_fuzzy_context());
+    return rcpp_result_gen;
+END_RCPP
+}
+// int_fuzzy_update
+SEXP int_fuzzy_update(SEXP sctx, std::vector < unsigned char > v);
+RcppExport SEXP _ssdeepr_int_fuzzy_update(SEXP sctxSEXP, SEXP vSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type sctx(sctxSEXP);
+    Rcpp::traits::input_parameter< std::vector < unsigned char > >::type v(vSEXP);
+    rcpp_result_gen = Rcpp::wrap(int_fuzzy_update(sctx, v));
+    return rcpp_result_gen;
+END_RCPP
+}
+// int_fuzzy_digest
+String int_fuzzy_digest(SEXP sctx);
+RcppExport SEXP _ssdeepr_int_fuzzy_digest(SEXP sctxSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type sctx(sctxSEXP);
+    rcpp_result_gen = Rcpp::wrap(int_fuzzy_digest(sctx));
+    return rcpp_result_gen;
+END_RCPP
+}
 // int_hash_file
 String int_hash_file(String path);
 RcppExport SEXP _ssdeepr_int_hash_file(SEXP pathSEXP) {
@@ -41,6 +95,11 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_ssdeepr_check_is_xptr", (DL_FUNC) &_ssdeepr_check_is_xptr, 1},
+    {"_ssdeepr_is_null_xptr_", (DL_FUNC) &_ssdeepr_is_null_xptr_, 1},
+    {"_ssdeepr_int_fuzzy_context", (DL_FUNC) &_ssdeepr_int_fuzzy_context, 0},
+    {"_ssdeepr_int_fuzzy_update", (DL_FUNC) &_ssdeepr_int_fuzzy_update, 2},
+    {"_ssdeepr_int_fuzzy_digest", (DL_FUNC) &_ssdeepr_int_fuzzy_digest, 1},
     {"_ssdeepr_int_hash_file", (DL_FUNC) &_ssdeepr_int_hash_file, 1},
     {"_ssdeepr_int_hash_buf", (DL_FUNC) &_ssdeepr_int_hash_buf, 1},
     {"_ssdeepr_int_hash_cmp", (DL_FUNC) &_ssdeepr_int_hash_cmp, 2},

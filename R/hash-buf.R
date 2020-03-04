@@ -9,9 +9,9 @@
 #' hash_raw(ltrs)
 hash_raw <- function(x) {
 
-  stopifnot(is.raw(x) ||((length(x) == 1) && is.character(x)))
+  if ((length(x) == 1) && (is.character(x))) x <- charToRaw(x)
 
-  if (is.character(x[1])) x <- rawToChar(x[1])
+  stopifnot(is.raw(x))
 
   int_hash_buf(x)
 
