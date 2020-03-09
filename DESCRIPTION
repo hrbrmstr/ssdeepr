@@ -13,7 +13,7 @@ Description: The ssdeep project provides an open source library <https://github.
    hashes from character/byte streams.
 URL: https://git.rud.is/hrbrmstr/ssdeepr
 BugReports: https://git.rud.is/hrbrmstr/ssdeepr/issues
-SystemRequirements: libfuzzy <https://ssdeep-project.github.io/ssdeep/index.html#platforms>
+SystemRequirements: C++11
 Encoding: UTF-8
 License: AGPL
 Suggests: 

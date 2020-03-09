@@ -1,7 +1,15 @@
-PKG_CPPFLAGS=-I/usr/local/opt/ssdeep/include
-PKG_LIBS=-L/usr/local/opt/ssdeep/lib -L/usr/local/opt/ssdeep/lib -lfuzzy
+PKG_CPPFLAGS=-I.
+CXX_STD = CXX11
+PKG_LIBS=-L. libffuzzypp.a
+FUZZY_DIR=ffuzzypp-release-4.0.1
 
-all: clean
+all: libffuzzypp.a clean
+
+libffuzzypp.a:
+	cd lib/${FUZZY_DIR} && ./configure && make
+	cp lib/${FUZZY_DIR}/libffuzzypp.a ../..
+	cp -r lib/${FUZZY_DIR}/ffuzzypp ../..
+	cp lib/${FUZZY_DIR}/ffuzzy.hpp ../..
 
 clean:
 	rm -Rf $(SHLIB) $(OBJECTS)

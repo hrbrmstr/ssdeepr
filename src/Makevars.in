@@ -1,7 +1,0 @@
-PKG_CPPFLAGS=@cflags@
-PKG_LIBS=@libs@
-
-all: clean
-
-clean:
-	rm -Rf $(SHLIB) $(OBJECTS)
