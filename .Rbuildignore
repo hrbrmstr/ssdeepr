@@ -19,3 +19,5 @@
 ^CRAN-RELEASE$
 ^appveyor\.yml$
 ^tools$
+libfuzzy\.a
+^LICENSE\.md$

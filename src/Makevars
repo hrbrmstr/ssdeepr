@@ -1,14 +1,13 @@
-PKG_CPPFLAGS=-I./lib/ssdeep-2.14.1/include
+PKG_CPPFLAGS=-I.
 PKG_LIBS=./libfuzzy.a
+SSDEEP_DIR=ssdeep-2.14.1
 
 all: config.h clean
 
 config.h:
-	cd ./lib/ssdeep-2.14.1/ && ./configure && make
-	cp ./lib/ssdeep-2.14.1/.libs/libfuzzy.a .
-	cp ./lib/ssdeep-2.14.1/config.h .
-	cp ./lib/ssdeep-2.14.1/fuzzy.h .
+	cd ./lib/${SSDEEP_DIR}/ && ./configure && make
+	cp ./lib/${SSDEEP_DIR}/.libs/libfuzzy.a ./lib/${SSDEEP_DIR}/config.h ./lib/${SSDEEP_DIR}/fuzzy.h .
+	cd ./lib/${SSDEEP_DIR}/ && make clean
 
 clean:
-	# rm -Rf config.h $(OBJECTS)
-	# rm -Rf $(SHLIB) $(OBJECTS)
+	rm -Rf config.h $(OBJECTS)s

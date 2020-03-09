@@ -94,8 +94,8 @@ bin_PROGRAMS = ssdeep$(EXEEXT)
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+	$(top_srcdir)/m4/lt-obselete.m4 $(top_srcdir)/m4/ltoptions.m4 \
+	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
 	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
@@ -274,7 +274,7 @@ AS = as
 AUTOCONF = ${SHELL} /Users/hrbrmstr/packages/ssdeepr/src/lib/ssdeep-2.14.1/missing autoconf
 AUTOHEADER = ${SHELL} /Users/hrbrmstr/packages/ssdeepr/src/lib/ssdeep-2.14.1/missing autoheader
 AUTOMAKE = ${SHELL} /Users/hrbrmstr/packages/ssdeepr/src/lib/ssdeep-2.14.1/missing automake-1.16
-AWK = awk
+AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
@@ -293,10 +293,10 @@ DUMPBIN =
 ECHO_C = \c
 ECHO_N = 
 ECHO_T = 
-EGREP = /usr/bin/grep -E
+EGREP = /usr/local/bin/ggrep -E
 EXEEXT = 
-FGREP = /usr/bin/grep -F
-GREP = /usr/bin/grep
+FGREP = /usr/local/bin/ggrep -F
+GREP = /usr/local/bin/ggrep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
@@ -313,7 +313,7 @@ LTLIBOBJS =
 LT_SYS_LIBRARY_PATH = 
 MAKEINFO = ${SHELL} /Users/hrbrmstr/packages/ssdeepr/src/lib/ssdeep-2.14.1/missing makeinfo
 MANIFEST_TOOL = :
-MKDIR_P = ./install-sh -c -d
+MKDIR_P = /usr/local/bin/gmkdir -p
 NM = /usr/bin/nm -B
 NMEDIT = nmedit
 OBJDUMP = objdump
