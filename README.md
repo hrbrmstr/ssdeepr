@@ -10,7 +10,7 @@ by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keyb
 Status](https://travis-ci.org/hrbrmstr/ssdeepr.svg?branch=master)](https://travis-ci.org/hrbrmstr/ssdeepr)  
 ![Minimal R
 Version](https://img.shields.io/badge/R%3E%3D-3.2.0-blue.svg)
-![License](https://img.shields.io/badge/License-AGPL-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 # ssdeepr
 
@@ -33,27 +33,14 @@ The following functions are implemented:
   - `hash_file`: Return CTP hash of one or more files
   - `hash_raw`: Return CTP hash of a raw vector
   - `is_null_xptr_`: Test whether an external pointer is null
+  - `split_hash`: Splits an ssdeep hash string into component parts
 
 ## Installation
 
-You’ll need `libfuzzy` installed and available for linking. See
-<https://ssdeep-project.github.io/ssdeep/index.html#platforms> for
-platform support.
-
-On Ubuntu/Debian you can do:
-
-``` shell
-sudo apt install libfuzzy-dev
-```
-
-On macOS you can do:
-
-``` shell
-brew install ssdeep
-```
+The ssdeep library is bundled with the package source.
 
 The library works on Windows, I just need to do some manual labor for
-that.
+that, still.
 
 Package installation:
 
@@ -135,7 +122,7 @@ content and, thus, a different hash.
 ``` r
 (k1 <- hash_con(url("https://en.wikipedia.org/wiki/Donald_Knuth", 
                     header = setNames(splashr::ua_ios_safari, "User-Agent"))))
-## [1] "1536:lWaFW+jsCHr6UVyn1KSLnGURhAa0qYHaYF8tUdkWO9F+mTi9f0ruvSWWqdX:fbL6EOKsGMYJF8t99EBxzWwX"
+## [1] "1536:LWaFR+jsCHr6UVyn1KSLnGURhAa0qYHaYF8tUdkWO9F+mTi9f0ruvSWJqdI:JWL6EOKsGMYJF8t99EBxzJwI"
 
 (k2 <- hash_con(file(system.file("knuth", "local.html", package = "ssdeepr"))))
 ## [1] "3072:u2dfqECHC6NPsWzqFg2qDKgNYsVeJb19pEDTlfrd5czRsZNqqelzPFKsuXs6X9pU:PQli6NPsWzcg2/EYsVUY6sI"
@@ -163,19 +150,23 @@ microbenchmark::microbenchmark(
 )
 ## Unit: milliseconds
 ##  expr      min       lq     mean   median       uq       max neval cld
-##   con 6.495121 6.836061 7.395381 6.994470 7.288456 22.199177   100  b 
-##   gzc 7.453229 7.699096 8.062517 7.863777 8.074039 11.198605   100   c
-##   fil 5.576031 5.972613 6.182320 6.128887 6.382334  7.773328   100 a
+##   con 6.050446 6.207712 6.357149 6.335506 6.489715  6.948830   100  b 
+##   gzc 6.817468 7.082380 7.296807 7.172750 7.291186 19.176480   100   c
+##   fil 5.269110 5.431974 5.544224 5.508470 5.652608  6.087048   100 a
 ```
 
 ## ssdeepr Metrics
 
-| Lang         | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
-| :----------- | -------: | ---: | --: | ---: | ----------: | ---: | -------: | ---: |
-| C++          |        2 | 0.15 | 168 | 0.51 |          45 | 0.36 |       26 | 0.15 |
-| R            |        8 | 0.62 |  78 | 0.24 |          34 | 0.27 |       83 | 0.47 |
-| Bourne Shell |        2 | 0.15 |  54 | 0.16 |           9 | 0.07 |       14 | 0.08 |
-| Rmd          |        1 | 0.08 |  28 | 0.09 |          37 | 0.30 |       53 | 0.30 |
+| Lang         | \# Files |  (%) |   LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
+| :----------- | -------: | ---: | ----: | ---: | ----------: | ---: | -------: | ---: |
+| Bourne Shell |       11 | 0.20 | 35855 | 0.72 |        5973 | 0.74 |     7791 | 0.86 |
+| m4           |        7 | 0.13 |  9219 | 0.19 |         991 | 0.12 |      100 | 0.01 |
+| C++          |       10 | 0.19 |  1649 | 0.03 |         536 | 0.07 |      404 | 0.04 |
+| C            |        4 | 0.07 |  1027 | 0.02 |         178 | 0.02 |      223 | 0.02 |
+| make         |        2 | 0.04 |  1019 | 0.02 |         131 | 0.02 |       51 | 0.01 |
+| C/C++ Header |        9 | 0.17 |   732 | 0.01 |         212 | 0.03 |      360 | 0.04 |
+| R            |       10 | 0.19 |    92 | 0.00 |          39 | 0.00 |       96 | 0.01 |
+| Rmd          |        1 | 0.02 |    28 | 0.00 |          33 | 0.00 |       45 | 0.00 |
 
 ## Code of Conduct
 

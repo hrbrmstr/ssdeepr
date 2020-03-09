@@ -14,12 +14,12 @@
 #' hash_compare(hashes$hash[1], hashes$hash[4])
 hash_file <- function(path) {
 
-  path <- path.expand(path)
-
   lapply(path, function(.x) {
 
-    if (file.exists(.x)) {
-      hash <- int_hash_file(.x)
+    xpath <- path.expand(.x)
+
+    if (file.exists(xpath)) {
+      hash <- int_hash_file(xpath)
     } else {
       hash <- NA_character_
     }
