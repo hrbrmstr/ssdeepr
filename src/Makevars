@@ -7,7 +7,7 @@ all: config.h
 config.h:
 	cd lib/${SSDEEP_DIR} && ./configure && make
 	cd lib/${SSDEEP_DIR} && cp .libs/libfuzzy.a config.h fuzzy.h ../..
-#	cd lib/${SSDEEP_DIR}/ && make clean
+	cd lib/${SSDEEP_DIR} && make clean
 
 clean:
 #	rm -Rf config.h $(OBJECTS)
