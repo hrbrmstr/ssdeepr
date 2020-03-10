@@ -30,8 +30,8 @@ Kernel configured for up to 12 processors.
 Processor type: i486 (Intel 80486)
 Processors active: 0 1 2 3 4 5 6 7 8 9 10 11
 Primary memory available: 48.00 gigabytes
-Default processor set: 626 tasks, 3351 threads, 12 processors
-Load average: 3.76, Mach factor: 8.23
+Default processor set: 631 tasks, 3299 threads, 12 processors
+Load average: 2.64, Mach factor: 9.35
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
@@ -47,6 +47,14 @@ PATH: /usr/local/MacGPG2/bin
 PATH: /opt/X11/bin
 PATH: /Library/Frameworks/Mono.framework/Versions/Current/Commands
 PATH: /Applications/Wireshark.app/Contents/MacOS
+PATH: /Applications/RStudio.app/Contents/MacOS/postback
+PATH: /Applications/RStudio.app/Contents/MacOS/postback
+PATH: /Applications/RStudio.app/Contents/MacOS/postback
+PATH: /Applications/RStudio.app/Contents/MacOS/postback
+PATH: /Applications/RStudio.app/Contents/MacOS/postback
+PATH: /Applications/RStudio.app/Contents/MacOS/postback
+PATH: /Applications/RStudio.app/Contents/MacOS/postback
+PATH: /Applications/RStudio.app/Contents/MacOS/postback
 PATH: /Applications/RStudio.app/Contents/MacOS/postback
 PATH: /Applications/RStudio.app/Contents/MacOS/postback
 PATH: /Applications/RStudio.app/Contents/MacOS/postback
@@ -686,7 +694,6 @@ on liono.local
 
 config.status:1158: creating Makefile
 config.status:1158: creating config.h
-config.status:1339: config.h is unchanged
 config.status:1387: executing depfiles commands
 config.status:1464: cd .       && sed -e '/# am--include-marker/d' Makefile         | make -j8 -f - am--depfiles
 make[1]: Nothing to be done for `am--depfiles'.
