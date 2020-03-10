@@ -1,0 +1,6 @@
+#!/bin/sh
+
+SSDEEP_DIR=ssdeep-2.14.1
+
+rm src/config.h src/lib/${SSDEEP_DIR}/config.h
+cd src/lib/${SSDEEP_DIR} && make clean
