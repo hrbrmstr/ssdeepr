@@ -25,9 +25,21 @@ hrbrpkghelpr::describe_ingredients()
 
 ## Installation
 
-The ssdeep library is bundled with the package source.
+You'll need `libfuzzy` installed and available for linking. See <https://ssdeep-project.github.io/ssdeep/index.html#platforms> for platform support.
 
-The library works on Windows, I just need to do some manual labor for that, still.
+On Ubuntu/Debian you can do:
+
+```shell
+sudo apt install libfuzzy-dev
+```
+
+On macOS you can do:
+
+```shell
+brew install ssdeep
+```
+
+The library works on Windows, I just need to do some manual labor for that.
 
 Package installation:
 

@@ -1,5 +1,5 @@
 #include <Rcpp.h>
-#include "fuzzy.h"
+#include <fuzzy.h>
 
 using namespace Rcpp;
 

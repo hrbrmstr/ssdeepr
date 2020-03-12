@@ -5,7 +5,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Signed
 by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
 ![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-100%25-lightgrey.svg)
+%](https://img.shields.io/badge/Signed_Commits-85%25-lightgrey.svg)
 [![Linux build
 Status](https://travis-ci.org/hrbrmstr/ssdeepr.svg?branch=master)](https://travis-ci.org/hrbrmstr/ssdeepr)  
 ![Minimal R
@@ -37,15 +37,29 @@ The following functions are implemented:
 
 ## Installation
 
-The ssdeep library is bundled with the package source.
+You’ll need `libfuzzy` installed and available for linking. See
+<https://ssdeep-project.github.io/ssdeep/index.html#platforms> for
+platform support.
+
+On Ubuntu/Debian you can do:
+
+``` shell
+sudo apt install libfuzzy-dev
+```
+
+On macOS you can do:
+
+``` shell
+brew install ssdeep
+```
 
 The library works on Windows, I just need to do some manual labor for
-that, still.
+that.
 
 Package installation:
 
 ``` r
-install.packages("ssdeepr", repos = "https://cinc.rud.is")
+install.packages("ssdeepr", repos = c("https://cinc.rud.is", "https://cloud.r-project.org/"))
 # or
 remotes::install_git("https://git.rud.is/hrbrmstr/ssdeepr.git")
 # or
@@ -122,7 +136,7 @@ content and, thus, a different hash.
 ``` r
 (k1 <- hash_con(url("https://en.wikipedia.org/wiki/Donald_Knuth", 
                     header = setNames(splashr::ua_ios_safari, "User-Agent"))))
-## [1] "1536:LWaFR+jsCHr6UVyn1KSLnGURhAa0qYHaYF8tUdkWO9F+mTi9f0ruvSWJqdI:JWL6EOKsGMYJF8t99EBxzJwI"
+## [1] "1536:IWaFR+jsCHr6UVyn1KSLnGURhAa0qYHaYF8tUdkWO9F+mTi9f0ruvSWnqd4:GWL6EOKsGMYJF8t99EBxznw4"
 
 (k2 <- hash_con(file(system.file("knuth", "local.html", package = "ssdeepr"))))
 ## [1] "3072:u2dfqECHC6NPsWzqFg2qDKgNYsVeJb19pEDTlfrd5czRsZNqqelzPFKsuXs6X9pU:PQli6NPsWzcg2/EYsVUY6sI"
@@ -149,24 +163,20 @@ microbenchmark::microbenchmark(
   fil = hash_file(system.file("knuth", "local.html", package = "ssdeepr"))
 )
 ## Unit: milliseconds
-##  expr      min       lq     mean   median       uq       max neval cld
-##   con 6.050446 6.207712 6.357149 6.335506 6.489715  6.948830   100  b 
-##   gzc 6.817468 7.082380 7.296807 7.172750 7.291186 19.176480   100   c
-##   fil 5.269110 5.431974 5.544224 5.508470 5.652608  6.087048   100 a
+##  expr      min       lq     mean   median       uq       max neval
+##   con 5.902252 6.004019 6.410288 6.130342 6.531428 16.202922   100
+##   gzc 6.717070 6.821839 7.175860 7.037044 7.540798  8.369695   100
+##   fil 5.129446 5.218194 5.559326 5.392933 5.692457  7.002297   100
 ```
 
 ## ssdeepr Metrics
 
-| Lang         | \# Files |  (%) |   LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
-| :----------- | -------: | ---: | ----: | ---: | ----------: | ---: | -------: | ---: |
-| Bourne Shell |       11 | 0.20 | 35855 | 0.72 |        5973 | 0.74 |     7791 | 0.86 |
-| m4           |        7 | 0.13 |  9219 | 0.19 |         991 | 0.12 |      100 | 0.01 |
-| C++          |       10 | 0.19 |  1649 | 0.03 |         536 | 0.07 |      404 | 0.04 |
-| C            |        4 | 0.07 |  1027 | 0.02 |         178 | 0.02 |      223 | 0.02 |
-| make         |        2 | 0.04 |  1019 | 0.02 |         131 | 0.02 |       51 | 0.01 |
-| C/C++ Header |        9 | 0.17 |   732 | 0.01 |         212 | 0.03 |      360 | 0.04 |
-| R            |       10 | 0.19 |    92 | 0.00 |          39 | 0.00 |       96 | 0.01 |
-| Rmd          |        1 | 0.02 |    28 | 0.00 |          33 | 0.00 |       45 | 0.00 |
+| Lang         | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
+| :----------- | -------: | ---: | --: | ---: | ----------: | ---: | -------: | ---: |
+| C++          |        2 | 0.13 | 168 | 0.49 |          45 | 0.34 |       26 | 0.14 |
+| R            |       10 | 0.67 |  92 | 0.27 |          39 | 0.30 |       96 | 0.51 |
+| Bourne Shell |        2 | 0.13 |  53 | 0.16 |          10 | 0.08 |       14 | 0.07 |
+| Rmd          |        1 | 0.07 |  28 | 0.08 |          37 | 0.28 |       53 | 0.28 |
 
 ## Code of Conduct
 

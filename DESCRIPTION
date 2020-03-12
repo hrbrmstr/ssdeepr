@@ -1,8 +1,8 @@
 Package: ssdeepr
 Type: Package
 Title: Context Triggered Piecewise Hash Computation Using 'ssdeep'
-Version: 0.2.0
-Date: 2020-03-03
+Version: 0.2.1
+Date: 2020-03-12
 Authors@R: c(
     person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
            comment = c(ORCID = "0000-0001-5670-2640"))
@@ -14,6 +14,7 @@ Description: The ssdeep project provides an open source library <https://github.
 URL: https://git.rud.is/hrbrmstr/ssdeepr
 BugReports: https://git.rud.is/hrbrmstr/ssdeepr/issues
 RequiresCompilation: yes
+SystemRequirements: libfuzzy <https://ssdeep-project.github.io/ssdeep/index.html#platforms>
 Encoding: UTF-8
 License: MIT + file LICENSE
 Suggests: 
